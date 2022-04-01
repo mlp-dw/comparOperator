@@ -13,9 +13,9 @@ class Manager
         $this->bdd->insertInto()
     }
     
-    function createTourOperator()
+    function createTourOperator($TourOperator)
     {
-        
+        $this->database->add($TourOperator->toSql());
     }
     
     function createReview()
