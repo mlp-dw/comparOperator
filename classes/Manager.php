@@ -3,15 +3,14 @@
 class Manager
 {
     private $bdd;
+    
 
-    function __construct($bdd)
-    {
-        $this->database = new Database();
+    public function __construct() {
+        $this->bdd = new Database();
     }
 
-    function createDestination($destination)
-    {
-
+    function createDestination($destination){
+        $this->bdd->insertInto()
     }
     
     function createTourOperator($TourOperator)
