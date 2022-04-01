@@ -2,7 +2,7 @@
 include './utils/header.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
-var_dump($getAllTO);
+
 ?>
 
     <section>

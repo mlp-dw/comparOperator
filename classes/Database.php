@@ -26,11 +26,28 @@ class Database {
         $request->execute();
     }
 
-    public function update(){
+    public function update($table, $id, $values)
+    {
+    $request = 'UPDATE ' . $table . ' SET ';
+    foreach ($values as $key => $value) 
+    {
+        $request .= $key . " = '".$value."',";
+    }
+    $request = substr($request, 0, -1);
+    $request .= "WHERE id = " . $id;
 
+    $query = $this->db->prepare($request);
+    $query->execute();
     }
 
-    public function selectOne(){
+
+    public function selectOne($table, $id){
+    // On récupère les données d'une ligne SQL en spécifiant la table et l'id que l'on cherche
+    $request = $this->db->query("SELECT * FROM $table WHERE id = '$id'");
+    $data = $request->fetch();
+
+    // On retourne les données brutes
+    return $data;
 
     }
 
