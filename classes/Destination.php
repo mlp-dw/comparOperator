@@ -22,14 +22,14 @@ class Destination
         $this->hydrate($data);
     }
 
-    // public function toSql() {
-    //     return array(
-    //         'id' => $this->getId(),
-    //         'location' => $this->getLocation(),
-    //         'price' => $this->getPrice(),
-    //         'tour_operator_id' => $this->getTourOperatorId()    
-    //     );
-    // }
+    public function toSql() {
+        return array(
+            'id' => $this->getId(),
+            'location' => $this->getLocation(),
+            'price' => $this->getPrice(),
+            'tour_operator_id' => $this->getTourOperatorId()    
+        );
+    }
 
     function getId($id)
     {

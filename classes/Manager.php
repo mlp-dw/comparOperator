@@ -5,17 +5,19 @@ class Manager
     private $bdd;
     
 
-    public function __construct() {
+    public function __construct() 
+    {
         $this->bdd = new Database();
-    }
+    }    static public $TABLE = 'tour_operator';
 
-    function createDestination($destination){
-        $this->bdd->insertInto()
+    function createDestination($destination)
+    {
+        $this->bdd->insertInto();
     }
     
     function createTourOperator($TourOperator)
     {
-        $this->database->add($TourOperator->toSql());
+        $this->database->insertInto(TourOperator::$TABLE_TO, $TourOperator->toSql());
     }
     
     function createReview()

@@ -7,7 +7,7 @@ class TourOperator {
     private $gradeCount;
     private $gradeTotal;
     private $isPremium;
-    static public $TABLE = 'tour_operator';
+    static public $TABLE_TO = 'tour_operator';
 
 
     public function __construct($data) {
