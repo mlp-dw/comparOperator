@@ -16,6 +16,15 @@ class Review {
         $this->author = $data['author'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
     }
+
+    public function toSql() {
+        return array(
+            'id' => $this->getId(),
+            'message' => $this->getMessage(),
+            'author' => $this->getAuthor(),
+            'tour_operator_id' => $this->getTourOperatorId()
+        );
+    }
     public function getId(){
 
     }
