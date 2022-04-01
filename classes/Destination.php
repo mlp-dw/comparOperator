@@ -1,53 +1,47 @@
 <?php 
 
 
-class Destination
-{
+class Destination {
+    
     private $id;
     private $location;
     private $price;
     private $tourOperatorId;
-    static public $TABLE = 'destination';
+    static public $TABLE_DESTINATION = 'destination';
 
-    private function hydrate($data) 
-    {
+    private function hydrate($data) {
         $this->id = $data['id'];
         $this->location = $data['location'] ;
         $this->price = $data['price'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
     }
 
-    function __construct($data)
-    {
+    function __construct($data){
         $this->hydrate($data);
     }
 
-    // public function toSql() {
-    //     return array(
-    //         'id' => $this->getId(),
-    //         'location' => $this->getLocation(),
-    //         'price' => $this->getPrice(),
-    //         'tour_operator_id' => $this->getTourOperatorId()    
-    //     );
-    // }
-
-    function getId($id)
-    {
-        $this->id = $id;
+    public function toSql() {
+        return array(
+            'id' => $this->getId(),
+            'location' => $this->getLocation(),
+            'price' => $this->getPrice(),
+            'tour_operator_id' => $this->getTourOperatorId()    
+        );
     }
 
-    function getLocation($location)
-    {
-        $this->location = $location;
+    function getId(){
+        return $this->id;
     }
 
-    function getPrice($price)
-    {
-        $this->price = $price;
+    function getLocation(){
+        return $this->location ;
     }
 
-    function getTourOperatorId($tourOperatorId)
-    {
-        $this->tourOperatorId = $tourOperatorId;
+    function getPrice(){
+        return $this->price;
+    }
+
+    function getTourOperatorId(){
+        return $this->tourOperatorId;
     }
 }
