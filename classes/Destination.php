@@ -9,8 +9,10 @@ class Destination {
     private $tourOperatorId;
     static public $TABLE_DESTINATION = 'destination';
 
-    private function hydrate($data) {
-        $this->id = $data['id'];
+
+    private function hydrate($data) 
+    {
+        $this->id = $data['id'] ?? null;
         $this->location = $data['location'] ;
         $this->price = $data['price'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
