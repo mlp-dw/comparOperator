@@ -3,51 +3,46 @@
 class Manager
 {
     private $bdd;
-    
 
     public function __construct() 
     {
         $this->bdd = new Database();
     }    static public $TABLE = 'tour_operator';
 
-    function createDestination($destination)
+    function createTourOperator($tourOperator)
     {
-        $this->bdd->insertInto();
+        $this->database->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
     }
-    
-    function createTourOperator($TourOperator)
+  
+    public function createDestination($destination)
     {
-        $this->database->insertInto(TourOperator::$TABLE_TO, $TourOperator->toSql());
+        $this->bdd->insertInto(Destination::$TABLE_DESTINATION, $destination->toSql());
     }
+ 
     
-    function createReview()
-    {
+    function createReview(){
         
     }
 
-    function getAllOperator($id)
-    {
-        
+    function getAllOperator(){
+        $this->bdd-> ;
     }
     
-    function getAllDestination($id)
-    {
-    
-    }
-
-    function getOperatorByDestination($price)
-    {
-        
-    }
-    
-    function getReviewByOperatorId($tourOperatorId)
-    {
+    public function getAllDestinations(){
+        $this->bdd-> ;
         
     }
 
-    function updateOperatorToPremium()
-    {
-        
+    function getOperatorByDestination($price){
+        $this->bdd-> ;
+    }
+    
+    function getReviewByOperatorId($tourOperatorId){
+        $this->bdd-> ;
+    }
+
+    function updateOperatorToPremium(){
+        $this->bdd-> ;
     }
 
 }

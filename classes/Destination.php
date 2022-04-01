@@ -1,13 +1,14 @@
 <?php 
 
 
-class Destination
-{
+class Destination {
+    
     private $id;
     private $location;
     private $price;
     private $tourOperatorId;
-    static public $TABLE = 'destination';
+    static public $TABLE_DESTINATION = 'destination';
+
 
     private function hydrate($data) 
     {
@@ -17,8 +18,7 @@ class Destination
         $this->tourOperatorId = $data['tour_operator_id'] ;
     }
 
-    function __construct($data)
-    {
+    function __construct($data){
         $this->hydrate($data);
     }
 
@@ -31,23 +31,19 @@ class Destination
         );
     }
 
-    function getId($id)
-    {
-        $this->id = $id;
+    function getId(){
+        return $this->id;
     }
 
-    function getLocation($location)
-    {
-        $this->location = $location;
+    function getLocation(){
+        return $this->location ;
     }
 
-    function getPrice($price)
-    {
-        $this->price = $price;
+    function getPrice(){
+        return $this->price;
     }
 
-    function getTourOperatorId($tourOperatorId)
-    {
-        $this->tourOperatorId = $tourOperatorId;
+    function getTourOperatorId(){
+        return $this->tourOperatorId;
     }
 }

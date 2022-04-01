@@ -1,5 +1,9 @@
 <?php
+
 include './header.php';
+
+$manager = new Manager();
+
 ?>
 
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
@@ -39,4 +43,8 @@ include './header.php';
 
 <?php
 include './footer.php';
+
+
 ?>
+
+

@@ -29,32 +29,36 @@ class TourOperator {
             'name' => $this->getName(),
             'link' => $this->getLink(),
             'grade_count' => $this->getGradeCount(),
-            'grade_total' => $this->getGrade(),
+            'grade_total' => $this->getGradeTotal(),
             'is_premium' => $this->getIsPremium()
         );
     }
 
     public function getId(){
-
+        return $this->id;
     }
 
     public function getName(){
-
+        return $this->name;
     }
 
     public function getLink(){
-
+        return $this->link;
     }
 
     public function getGradeCount(){
+        return $this->gradeCount;
+    }
 
+    public function getGradeTotal(){
+        return $this->gradeTotal;
     }
 
     public function getGrade(){
-
+        return ;//moyenne 
     }
 
     public function getIsPremium(){
-        
+        return $this->isPremium;
     }
 }
