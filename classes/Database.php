@@ -4,7 +4,7 @@ class Database {
     private $db;
 
     public function __construct() {
-        include '../config/db.php';
+        include __DIR__ . '/../config/db.php';
         $this->db = $db;
     }
 
@@ -34,8 +34,12 @@ class Database {
 
     }
 
-    public function selectAll(){
+    public function selectAll($table){
+        $request = $this->db->prepare("SELECT * FROM $table");
+        $request->execute();
+        $data = $request->fetchAll();
 
+        return $data;
     }
 
     public function selectAllWhere(){

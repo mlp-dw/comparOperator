@@ -7,7 +7,7 @@ class Manager
     public function __construct() 
     {
         $this->bdd = new Database();
-    }    static public $TABLE = 'tour_operator';
+    } 
 
     function createTourOperator($tourOperator)
     {
@@ -25,7 +25,12 @@ class Manager
     }
 
     function getAllOperator(){
-        
+        $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
+        function toObject($sql){
+            return new TourOperator($sql);
+        }
+        $newData = array_map("toObject", $data);  
+        return $newData;
     }
     
     public function getAllDestinations(){
