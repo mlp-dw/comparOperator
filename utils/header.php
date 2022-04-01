@@ -1,3 +1,7 @@
+<?php
+include "./config/db.php";
+include './config/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

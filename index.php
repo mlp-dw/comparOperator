@@ -1,4 +1,5 @@
+<?php
+$manager = new Manager();
 
+?>
 
-
-    
