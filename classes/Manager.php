@@ -46,8 +46,18 @@ class Manager
         
     }
 
-    function updateOperatorToPremium(){
-        
+    function updateOperatorPremiumStatus($tourOperator)
+    {
+        if($tourOperator->getPremium() == 0)
+        {
+            $value = 1;
+        }
+        else
+        {
+            $value = 0;
+        }
+        $this->bdd->update(TourOperator::$TABLE_TO, $tourOperator->getId(), ["is_premium"=>$value]);
+
     }
 
 }

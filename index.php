@@ -2,7 +2,7 @@
 include './utils/header.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
-var_dump($getAllTO);
+
 ?>
 
     <section>
@@ -43,7 +43,7 @@ var_dump($getAllTO);
                 <input type="text" name="location" class="form-control" id="location" placeholder="Your location here">
                 <label for="price">Price :</label>
                 <input type="text" name="price" class="form-control" id="price" placeholder="Your price here">
-                <select name="tour_operator-id">
+                <select name="tour_operator_id">
                     <?php foreach ($getAllTO as $tour) : ?>
                         <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                     <?php endforeach; ?>
