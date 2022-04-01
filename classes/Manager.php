@@ -11,7 +11,7 @@ class Manager
 
     function createTourOperator($tourOperator)
     {
-        $this->database->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
+        $this->bdd->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
     }
   
     public function createDestination($destination)
@@ -25,24 +25,24 @@ class Manager
     }
 
     function getAllOperator(){
-        $this->bdd-> ;
+        
     }
     
     public function getAllDestinations(){
-        $this->bdd-> ;
+        
         
     }
 
     function getOperatorByDestination($price){
-        $this->bdd-> ;
+        
     }
     
     function getReviewByOperatorId($tourOperatorId){
-        $this->bdd-> ;
+        
     }
 
     function updateOperatorToPremium(){
-        $this->bdd-> ;
+        
     }
 
 }

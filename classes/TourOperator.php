@@ -1,6 +1,6 @@
 <?php
 
-class TourOperator {
+class TourOperator{
     private $id;
     private $name;
     private $link;
@@ -18,8 +18,8 @@ class TourOperator {
         $this->id = $data['id'] ?? null;
         $this->name = $data['name'] ;
         $this->link = $data['link'] ;
-        $this->gradeCount = $data['grade_count'] ;
-        $this->gradeTotal = $data['grade_total'] ;
+        $this->gradeCount = $data['grade_count'] ?? 0;
+        $this->gradeTotal = $data['grade_total'] ?? 0 ;
         $this->isPremium = $data['is_premium'] ;
     }
 
@@ -46,16 +46,16 @@ class TourOperator {
         return $this->link;
     }
 
-    public function getGradeCount(){
+    public function getGradeCount(){ //nombre de notes obtenues
         return $this->gradeCount;
     }
 
-    public function getGradeTotal(){
+    public function getGradeTotal(){ // addition de toutes les notes
         return $this->gradeTotal;
     }
 
     public function getGrade(){
-        return ;//moyenne 
+        return ;//moyenne
     }
 
     public function getIsPremium(){
