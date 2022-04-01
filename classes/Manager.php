@@ -6,7 +6,7 @@ class Manager
 
     function __construct($bdd)
     {
-
+        $this->database = new Database();
     }
 
     function createDestination($destination)
@@ -14,9 +14,9 @@ class Manager
 
     }
     
-    function createTourOperator()
+    function createTourOperator($TourOperator)
     {
-        
+        $this->database->add($TourOperator->toSql());
     }
     
     function createReview()

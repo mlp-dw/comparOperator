@@ -10,7 +10,7 @@ class Destination
 
     private function hydrate($data) 
     {
-        $this->id = $data['id'];
+        $this->id = $data['id'] ?? null;
         $this->location = $data['location'] ;
         $this->price = $data['price'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
