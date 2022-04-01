@@ -4,7 +4,7 @@ class Database {
     private $db;
 
     public function __construct() {
-        include './config/db.php';
+        include '../config/db.php';
         $this->db = $db;
     }
 
