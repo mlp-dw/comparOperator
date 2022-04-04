@@ -13,7 +13,7 @@ $getAllTO = $manager->getAllOperator();
                         <div class="myform form">
                             <div class="logo mb-3">
                                 <div class="col-md-12 text-center">
-                                    <h1>Add TourOperator</h1>
+                                    <h1>ADD DESTINATION</h1>
                                 </div>
                             </div>
                             <form action="process/add_to.php" method="POST" name="tour_operator">
@@ -59,7 +59,9 @@ $getAllTO = $manager->getAllOperator();
                         <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                     <?php endforeach; ?>
                 </select>
-            <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+            <div class="col-md-12 text-center">
+                <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+            </div>
         </form>
                     
     </section>
@@ -69,8 +71,6 @@ $getAllTO = $manager->getAllOperator();
     </section>
 
 
-<?php
-include './utils/footer.php';
-?>
+<?php include './utils/footer.php';?>
 
 
