@@ -15,8 +15,8 @@ class Manager {
         $this->bdd->insertInto(Destination::$TABLE_DESTINATION, $destination->toSql());
     }
  
-    function createReview(){
-        
+    function createReview($review){
+        $this->bdd->insertInto(Review::$TABLE_REVIEW, $review->toSql());
     }
 
     function getAllOperator(){
@@ -30,14 +30,21 @@ class Manager {
     }
     
     public function getAllDestinations(){  
-        
+        $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
+
+        function destinationToObject($sql){
+            return new Destination($sql);
+        }
+        $newData = array_map("toObject", $data);  
+        return $newData;
     }
 
-    function getOperatorByDestination($price){
-        
+    function getOperatorByDestination($destination){
+        // $tourOperatorId = $this->bdd->selectOne(Destination::$TABLE_DESTINATION, $destination->getTourOperatorId());
+        // $tourOperator = $this->bdd->selectOne(TourOperator::$TABLE_TO, $tourOperatorId);
     }
     
-    function getReviewByOperatorId($tourOperatorId){
+    function getReviewByOperatorId(){
     }
 
     function updateOperatorPremiumStatus($tourOperator) {
