@@ -1,8 +1,8 @@
 <?php include './utils/header.php';
 $manager = new Manager();
-$getAllDestinations = $manager->getOperatorByDestination("Saboady");
-var_dump($getAllDestinations);
+$getAllDestinations = $manager->getOperatorByDestination($_GET["location"]);
 ?>
+
 
 <div class="d-flex justify-content-center my-5">
     <table class="align-items-center justify-content-center w-50 table table-info table-striped text-center">
@@ -15,9 +15,6 @@ var_dump($getAllDestinations);
             </tr>
         </thead>
         
-        <div>
-            <img src="" alt="">
-        </div>
         <?php
         foreach ($getAllDestinations as $destination) {
             ?>
@@ -26,13 +23,13 @@ var_dump($getAllDestinations);
                     <td><?=$destination->getLocation()?></td>
                     <td><?=$destination->getPrice()?></td>
                     <td><?=$manager->getOperator($destination->getTourOperatorId())->getName();?></td>
-                    <td><img src="<?=$destination->getImage();?>" class="img-fluid" alt="destination"></td>
+                    <td></td>
                 </tr>
             </tbody>
         <?php
         }
     ?>
-        </table>
-    </div>
+    </table>
+</div>
 
 <?php include './utils/footer.php';?>
