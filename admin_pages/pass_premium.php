@@ -20,12 +20,13 @@ $getAllTO = $manager->getAllOperator();
                                 <div class="form-group">
                                     <Label>Choose a Tour Operator</Label>
                                     <select name="tour_operator_id">
-                                        <?php foreach ($getAllTO as $tour) : ?>
+                                        <?php foreach ($getAllTO as $tour) : 
+                                            if($tour->getIsPremium() == 0){ ?>
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
-                                        <?php endforeach; ?>
+                                        <?php } endforeach; ?>
                                     </select>
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">premuim</button>
+                                    <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">premuim</button>
                                 </div>
                             </form>
                         </div>
