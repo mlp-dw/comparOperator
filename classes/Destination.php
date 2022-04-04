@@ -18,7 +18,6 @@ class Destination {
         $this->price = $data['price'] ;
         $this->image = $data['image'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
-        $this->image = $data['image'] ;
     }
 
     public function __construct($data){
@@ -55,7 +54,4 @@ class Destination {
         return $this->tourOperatorId;
     }
 
-    function getImage(){
-        return $this->image;
-    }
 }
