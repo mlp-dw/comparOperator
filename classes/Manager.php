@@ -35,12 +35,12 @@ class Manager {
     }
     
     public function getAllDestinations(){  
-        $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
+        $data = $this->bdd->selectAll(Destination::$TABLE_DESTINATION);
 
         function destinationToObject($sql){
             return new Destination($sql);
         }
-        $newData = array_map("toObject", $data);  
+        $newData = array_map("destinationToObject", $data);  
         return $newData;
     }
 

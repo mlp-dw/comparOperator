@@ -18,7 +18,7 @@ class Destination {
         $this->tourOperatorId = $data['tour_operator_id'] ;
     }
 
-    function __construct($data){
+    public function __construct($data){
         $this->hydrate($data);
     }
 
