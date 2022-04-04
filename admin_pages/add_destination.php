@@ -27,6 +27,8 @@ $getAllTO = $manager->getAllOperator();
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                                         <?php endforeach; ?>
                                     </select>
+                                    <label for="">Image</label>
+                                    <input type="text" name="image" placeholder="url image">
                                 <div class="col-md-12 text-center">
                                     <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
                                 </div>
