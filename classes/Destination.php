@@ -53,4 +53,5 @@ class Destination {
     public function getTourOperatorId(){
         return $this->tourOperatorId;
     }
+
 }

@@ -49,14 +49,13 @@ class Manager {
         return new Destination($data);
     }
 
-    public function getOperatorByDestination($destination){
-        $data = $this->bdd->selectAllWhere(Destination::$TABLE_DESTINATION, $destination->getLocation(), ["location"=>$destination]);
-        function operator($sql){
+    public function getOperatorByDestination($value){
+        $data = $this->bdd->selectAllWhere(Destination::$TABLE_DESTINATION, "location", $value);
+        function operatorDestinationToObject($sql){
             return new Destination($sql);
         }
-        $newData = array_map("operator", $data);  
+        $newData = array_map("operatorDestinationToObject", $data);  
         return $newData;
-
     }
     
     public function getReviewByOperatorId(){
