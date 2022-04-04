@@ -7,7 +7,7 @@ class Manager {
         $this->bdd = new Database();
     } 
 
-    function createTourOperator($tourOperator) {
+    public function createTourOperator($tourOperator) {
         $this->bdd->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
     }
   
@@ -15,11 +15,11 @@ class Manager {
         $this->bdd->insertInto(Destination::$TABLE_DESTINATION, $destination->toSql());
     }
  
-    function createReview($review){
+    public function createReview($review){
         $this->bdd->insertInto(Review::$TABLE_REVIEW, $review->toSql());
     }
 
-    function getAllOperator(){
+    public function getAllOperator(){
         $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
 
         function toObject($sql){
@@ -27,6 +27,11 @@ class Manager {
         }
         $newData = array_map("toObject", $data);  
         return $newData;
+    }
+
+    public function getOperator($id){
+        $data = $this->bdd->selectOne(TourOperator::$TABLE_TO, $id);
+        return new TourOperator($data);
     }
     
     public function getAllDestinations(){  
@@ -39,16 +44,16 @@ class Manager {
         return $newData;
     }
 
-    function getOperatorByDestination($destination){
+    public function getOperatorByDestination($destination){
         // $tourOperatorId = $this->bdd->selectOne(Destination::$TABLE_DESTINATION, $destination->getTourOperatorId());
         // $tourOperator = $this->bdd->selectOne(TourOperator::$TABLE_TO, $tourOperatorId);
     }
     
-    function getReviewByOperatorId(){
+    public function getReviewByOperatorId(){
     }
 
-    function updateOperatorPremiumStatus($tourOperator) {
-        if($tourOperator->getPremium() == 0) {
+    public function updateOperatorPremiumStatus($tourOperator) {
+        if($tourOperator->getIsPremium() == 0) {
             $value = 1;
         }else{
             $value = 0;
