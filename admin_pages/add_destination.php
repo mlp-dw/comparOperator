@@ -1,5 +1,5 @@
 <?php
-include '../utils/header.php';
+include '../utils/header_admin.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
 
@@ -38,4 +38,4 @@ $getAllTO = $manager->getAllOperator();
         </div>
     </section>
 
-<?php include '../utils/footer.php';?>
+<?php include '../utils/footer_admin.php';?>

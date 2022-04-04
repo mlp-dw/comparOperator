@@ -1,5 +1,5 @@
 <?php
-include '../utils/header.php';
+include '../utils/header_admin.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
 
@@ -25,7 +25,7 @@ $getAllTO = $manager->getAllOperator();
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                                         <?php } endforeach; ?>
                                     </select>
-                                <div class="col-md-12 text-center">
+                                <div class="col-md-12 text-center m-3">
                                     <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">premuim</button>
                                 </div>
                             </form>
@@ -35,4 +35,4 @@ $getAllTO = $manager->getAllOperator();
             </div>
         </div>
     </section>
-<?php include '../utils/footer.php';?>
+<?php include '../utils/footer_admin.php';?>
