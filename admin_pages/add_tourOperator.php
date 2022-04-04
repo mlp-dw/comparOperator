@@ -1,4 +1,4 @@
-<?php include '../utils/header.php';?>
+<?php include '../utils/header_admin.php';?>
 
     <section>
         <div class="container">
@@ -40,4 +40,4 @@
             </div>
         </div>
     </section>
-<?php include '../utils/footer.php';?>
+<?php include '../utils/footer_admin.php';?>
