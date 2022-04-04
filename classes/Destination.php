@@ -6,6 +6,7 @@ class Destination {
     private $id;
     private $location;
     private $price;
+    private $image;
     private $tourOperatorId;
     static public $TABLE_DESTINATION = 'destination';
 
@@ -16,9 +17,10 @@ class Destination {
         $this->location = $data['location'] ;
         $this->price = $data['price'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ;
+        $this->image = $data['image'] ;
     }
 
-    function __construct($data){
+    public function __construct($data){
         $this->hydrate($data);
     }
 
@@ -27,7 +29,8 @@ class Destination {
             'id' => $this->getId(),
             'location' => $this->getLocation(),
             'price' => $this->getPrice(),
-            'tour_operator_id' => $this->getTourOperatorId()    
+            'tour_operator_id' => $this->getTourOperatorId(), 
+            'image' => $this->getImage()  
         );
     }
 
@@ -45,5 +48,9 @@ class Destination {
 
     function getTourOperatorId(){
         return $this->tourOperatorId;
+    }
+
+    function getImage(){
+        return $this->image;
     }
 }
