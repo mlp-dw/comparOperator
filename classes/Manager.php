@@ -1,31 +1,27 @@
 <?php 
 
-class Manager
-{
+class Manager {
     private $bdd;
 
-    public function __construct() 
-    {
+    public function __construct() {
         $this->bdd = new Database();
     } 
 
-    function createTourOperator($tourOperator)
-    {
+    function createTourOperator($tourOperator) {
         $this->bdd->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
     }
   
-    public function createDestination($destination)
-    {
+    public function createDestination($destination) {
         $this->bdd->insertInto(Destination::$TABLE_DESTINATION, $destination->toSql());
     }
  
-    
     function createReview(){
         
     }
 
     function getAllOperator(){
         $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
+
         function toObject($sql){
             return new TourOperator($sql);
         }
@@ -33,8 +29,7 @@ class Manager
         return $newData;
     }
     
-    public function getAllDestinations(){
-        
+    public function getAllDestinations(){  
         
     }
 
@@ -43,21 +38,15 @@ class Manager
     }
     
     function getReviewByOperatorId($tourOperatorId){
-        
     }
 
-    function updateOperatorPremiumStatus($tourOperator)
-    {
-        if($tourOperator->getPremium() == 0)
-        {
+    function updateOperatorPremiumStatus($tourOperator) {
+        if($tourOperator->getPremium() == 0) {
             $value = 1;
-        }
-        else
-        {
+        }else{
             $value = 0;
         }
         $this->bdd->update(TourOperator::$TABLE_TO, $tourOperator->getId(), ["is_premium"=>$value]);
-
     }
 
 }

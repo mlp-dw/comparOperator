@@ -20,13 +20,24 @@ $getAllTO = $manager->getAllOperator();
                                 <div class="form-group">
                                 <input type="text" name="name" class="form-control" id="name" aria-describedby="name" placeholder="set name">
                                 <input type="text" name="link" class="form-control" id="link" aria-describedby="link" placeholder="set link">
-                                <input type="checkbox" value="1" name="is_premium" class="form-control" id="is_premium" aria-describedby="is_premium">
-                                <label for="Premium">Premium</label>                            
-                                <input type="checkbox" value="0" name="is_premium" class="form-control" id="is_not_premium" aria-describedby="is_not_premium" >
-                                <label for="Premium">Not Premium</label>
+                                
+                                
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="1" name="is_premium" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Premium
+                                    </label>
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="0" name="is_premium" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Normal
+                                    </label>
+                                </div>
+                                                         
                                 <div class="col-md-12 text-center ">
                                     <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">add new tour operator</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -51,6 +62,10 @@ $getAllTO = $manager->getAllOperator();
             <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
         </form>
                     
+    </section>
+
+    <section>
+        <h2>PASS PREMIUM</h2>
     </section>
 
 
