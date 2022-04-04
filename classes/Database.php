@@ -59,7 +59,11 @@ class Database {
         return $data;
     }
 
-    public function selectAllWhere(){
-        
+    public function selectAllWhere($table, $key, $value){
+        $request = $this->db->prepare("SELECT * FROM $table WHERE $key = '$value'");
+        $request->execute();
+        $data = $request->fetchAll();
+
+        return $data;
     }
 }

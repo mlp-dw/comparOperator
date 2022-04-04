@@ -4,6 +4,7 @@ class Review {
     private $message;
     private $author;
     private $tourOperatorId;
+    static public $TABLE_REVIEW = 'review';
 
     
     public function __construct($data) {
