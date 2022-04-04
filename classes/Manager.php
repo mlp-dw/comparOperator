@@ -44,9 +44,19 @@ class Manager {
         return $newData;
     }
 
+    public function getDestination($id){
+        $data = $this->bdd->selectOne(Destination::$TABLE_DESTINATION, $id);
+        return new Destination($data);
+    }
+
     public function getOperatorByDestination($destination){
-        // $tourOperatorId = $this->bdd->selectOne(Destination::$TABLE_DESTINATION, $destination->getTourOperatorId());
-        // $tourOperator = $this->bdd->selectOne(TourOperator::$TABLE_TO, $tourOperatorId);
+        $data = $this->bdd->selectAllWhere(Destination::$TABLE_DESTINATION, $destination->getLocation(), ["location"=>$destination]);
+        function operator($sql){
+            return new Destination($sql);
+        }
+        $newData = array_map("operator", $data);  
+        return $newData;
+
     }
     
     public function getReviewByOperatorId(){

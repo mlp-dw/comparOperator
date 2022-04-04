@@ -1,3 +1,4 @@
+
 <?php
 include './utils/header.php';
 $manager = new Manager();
@@ -8,6 +9,7 @@ $showDestinations = $manager->getAllDestinations();
 <?php 
 foreach($showDestinations as $destination)
         {?>
+
 
 <div class="image" style="width: 18rem;">
     <img src="<?=$destination->getImage();?>" class="card-img-top" alt="...">
@@ -21,5 +23,6 @@ foreach($showDestinations as $destination)
     <?php };?>
 </a>
 <?php include './utils/footer.php';?>
+
 
 
