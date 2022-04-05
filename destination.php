@@ -1,7 +1,9 @@
 <?php include './utils/header.php';
 $manager = new Manager();
+
 $getDestinationByTour = $manager->getOperatorByDestination($_GET["location"]);
 $getReviews           = $manager->getAllReviewByOperatorId();
+
 ?>
 
 <!-- START MODAL -->
@@ -19,7 +21,7 @@ $getReviews           = $manager->getAllReviewByOperatorId();
         </thead>
         
         <?php
-        foreach ($getDestinationByTour as $destination) {
+        foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
             ?>
             <tbody class="w-50">
@@ -29,7 +31,7 @@ $getReviews           = $manager->getAllReviewByOperatorId();
                     <?php
                         if($operator->getIsPremium() == 1){
                     ?>
-                        <td><a href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></td>
+                        <td><a target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></td>
                     <?php
                         }else{
                     ?>
@@ -44,12 +46,43 @@ $getReviews           = $manager->getAllReviewByOperatorId();
             <!-- ----------------------------------------------------------------------------------------------------------------------
             MODAL COMMENT -->
             <div class="modal fade" id="exampleModal<?=$destination->getTourOperatorId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Your review</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your review</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                
+                        <div class="modal-body">
+                            <form action="/comparOperator/process/add_review.php" method="post">
+                                <div class="mb-3">
+                                    <label for="author" class="col-form-label">Pseudo:</label>
+                                    <input type="text" name="author" id="author" placeholder="Enter your pseudonym here" class="form-control">
+                                </div>
+                                <input type="hidden" name="tour_operator_id" value="<?=$destination->getTourOperatorId()?>">
+                                <div class="mb-3">
+                                    <label for="message" class="col-form-label">Message:</label>
+                                    <textarea name="message" class="form-control" id="message" placeholder="Write your comment here"></textarea>
+                                </div>
+                                <label for="rating">Rating:</label>
+                                <input type="hidden" name="count" value="1">
+                                <select name="rating" id="rating">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                
+                                <div class="my-3">
+                                    <button type="submit" class="btn btn-primary">Send message</button>
+                                </div>
+                            </form>
+                        </div>
+                
                     </div>
+
             
                     <div class="modal-body">
                         <form action="/comparOperator/process/add_review.php" method="post">
@@ -92,16 +125,13 @@ $getReviews           = $manager->getAllReviewByOperatorId();
                     </div>
                     </div>
                 </div>
-              </div>
             </div>
-            <!-- -------------------------------------------------------------------------------------------------------------------- -->
+            <!-- END MODAL-------------------------------------------------------------------------------------------------------------------- -->
         <?php
         }
     ?>
     </table>
 </div>
-
-<!-- END MODAL -->
 
 
 <?php include './utils/footer.php';?>
