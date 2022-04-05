@@ -26,18 +26,20 @@ class Review {
             'tour_operator_id' => $this->getTourOperatorId()
         );
     }
+    
     public function getId(){
-
+        return $this->id;
     }
 
     public function getMessage(){
-
+        return $this->message;
     }
 
     public function getAuthor(){
-
+        return $this->author;
     }
+
     public function getTourOperatorId(){
-        
+        return $this->tourOperatorId;
     }
 }
