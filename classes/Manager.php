@@ -62,9 +62,13 @@ class Manager {
         return $newData;
     }
     
-    public function getReviewByOperatorId($id){
-        $data = $this->bdd->selectOne(Review::$TABLE_REVIEW, $id);
-        return new Review($data);
+    public function getAllReviewByOperatorId(){
+        $data = $this->bdd->selectAll(Review::$TABLE_REVIEW);
+        function reviewToObject($sql){
+            return new Review($sql);
+        }
+        $newData = array_map("reviewToObject", $data);  
+        return $newData;
     }
 
     public function updateOperatorPremiumStatus($tourOperator) {
