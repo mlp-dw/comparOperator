@@ -2,7 +2,6 @@
 $manager = new Manager();
 
 $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"]);
-$getReviews           = $manager->getAllReviewByOperatorId();
 
 ?>
 
@@ -23,6 +22,7 @@ $getReviews           = $manager->getAllReviewByOperatorId();
         <?php
         foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
+            $getReviews = $manager->getAllReviewByOperatorId($operator->getId());
             ?>
             <tbody class="w-50">
                 <tr>
