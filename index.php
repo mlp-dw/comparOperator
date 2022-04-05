@@ -14,7 +14,6 @@ foreach($showDestinations as $destination)
         <img src="<?=$destination->getImage();?>" class="card-img-top" alt="...">
         <div class="card-body">
             <div class="location">Destination : <?=$destination->getLocation();?></div>
-            <div class="price">Prix : <?=$destination->getPrice();?></div>
         </div>
     </div>
 </a>
