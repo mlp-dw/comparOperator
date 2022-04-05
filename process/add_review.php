@@ -6,6 +6,19 @@ $data = array(
     'tour_operator_id' => $_POST["tour_operator_id"]
 );
 $comment = new Review($data);
-$manager = new Manager;
+$manager = new Manager();
 
 $manager->createReview($comment);
+
+
+
+$id = $_POST["tour_operator_id"];
+$operator = $manager->getOperator($id);
+
+
+$rating = array(
+    'grade_count' => $operator->getGradeCount() + $_POST["count"],
+    'grade_total' => $operator->getGradeTotal() + $_POST["rating"]
+);
+
+$manager->addRating($id, $rating);
