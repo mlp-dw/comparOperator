@@ -1,6 +1,6 @@
 <?php include './utils/header.php';
 $manager = new Manager();
-$getAllOperators = $manager->getOperatorByDestination($_GET["location"]);
+$getDestinationByTour = $manager->getOperatorByDestination($_GET["location"]);
 ?>
 
 
@@ -17,20 +17,31 @@ $getAllOperators = $manager->getOperatorByDestination($_GET["location"]);
         </thead>
         
         <?php
-        foreach ($getAllOperators as $operator) {
+        foreach ($getDestinationByTour as $destination) {
+            $operator = $manager->getOperator($destination->getTourOperatorId());
             ?>
             <tbody class="w-50">
                 <tr>
-                    <td><?=$operator->getLocation()?></td>
-                    <td><?=$operator->getPrice()?></td>
-                    <td><?=$manager->getOperator($operator->getTourOperatorId())->getName();?></td>
-                    <td><?=$manager->getOperator($operator->getTourOperatorId())->getGrade();?> (<?= $manager->getOperator($operator->getTourOperatorId())->getGradeCount();?> reviews)</td>
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$operator->getTourOperatorId()?>" data-bs-whatever="@mdo">Comment here</button></td>
+                    <td><?=$destination->getLocation()?></td>
+                    <td><?=$destination->getPrice()?></td>
+                    <?php
+                        if($operator->getIsPremium() == 1){
+                    ?>
+                        <td><a href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></td>
+                    <?php
+                        }else{
+                    ?>
+                        <td><?=$operator->getName();?></td>
+                    <?php
+                        }
+                    ?>
+                    <td><?=$operator->getGrade();?> (<?= $operator->getGradeCount();?> reviews)</td>
+                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$destination->getTourOperatorId()?>" data-bs-whatever="@mdo">Comment here</button></td>
                 </tr>
             </tbody>
             <!-- ----------------------------------------------------------------------------------------------------------------------
             MODAL COMMENT -->
-            <div class="modal fade" id="exampleModal<?=$operator->getTourOperatorId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal<?=$destination->getTourOperatorId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -44,7 +55,7 @@ $getAllOperators = $manager->getOperatorByDestination($_GET["location"]);
                                 <label for="author" class="col-form-label">Pseudo:</label>
                                 <input type="text" name="author" id="author" placeholder="Enter your pseudonym here" class="form-control">
                             </div>
-                            <input type="hidden" name="tour_operator_id" value="<?=$operator->getTourOperatorId()?>">
+                            <input type="hidden" name="tour_operator_id" value="<?=$destination->getTourOperatorId()?>">
                             <div class="mb-3">
                                 <label for="message" class="col-form-label">Message:</label>
                                 <textarea name="message" class="form-control" id="message" placeholder="Write your comment here"></textarea>
