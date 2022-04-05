@@ -24,7 +24,7 @@ $getAllOperators = $manager->getOperatorByDestination($_GET["location"]);
                     <td><?=$operator->getLocation()?></td>
                     <td><?=$operator->getPrice()?></td>
                     <td><?=$manager->getOperator($operator->getTourOperatorId())->getName();?></td>
-                    <td><?=$manager->getOperator($operator->getTourOperatorId())->getGrade();?></td>
+                    <td><?=$manager->getOperator($operator->getTourOperatorId())->getGrade();?> (<?= $manager->getOperator($operator->getTourOperatorId())->getGradeCount();?> reviews)</td>
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Comment here</button>
 </td>
                 </tr>

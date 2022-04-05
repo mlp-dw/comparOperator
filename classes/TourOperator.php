@@ -55,6 +55,9 @@ class TourOperator{
     }
 
     public function getGrade(){
+        if ($this->gradeCount == 0 || $this->gradeTotal == 0) {
+            return 0;
+        }
         return $this->gradeTotal / $this->gradeCount;//moyenne
     }
 
