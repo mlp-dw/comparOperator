@@ -62,12 +62,10 @@ class Manager {
         return $newData;
     }
     
-    public function getAllReviewByOperatorId(){
-        $data = $this->bdd->selectAll(Review::$TABLE_REVIEW);
-        function reviewToObject($sql){
-            return new Review($sql);
-        }
-        $newData = array_map("reviewToObject", $data);  
+    
+    public function getAllReviewByOperatorId($tourOperatorId){
+        $data = $this->bdd->selectAllWhere(Review::$TABLE_REVIEW, "tour_operator_id", $tourOperatorId);
+        $newData = array_map(function ($sql) {return new Review($sql);}, $data);  
         return $newData;
     }
 
