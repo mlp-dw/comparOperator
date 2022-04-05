@@ -19,6 +19,10 @@ class Manager {
         $this->bdd->insertInto(Review::$TABLE_REVIEW, $review->toSql());
     }
 
+    public function addRating($id, $rating){
+        $this->bdd->update(TourOperator::$TABLE_TO, $id, $rating);
+    }
+
     public function getAllOperator(){
         $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
 

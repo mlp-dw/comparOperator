@@ -55,7 +55,7 @@ class TourOperator{
     }
 
     public function getGrade(){
-        return ;//moyenne
+        return $this->gradeTotal / $this->gradeCount;//moyenne
     }
 
     public function getIsPremium(){
