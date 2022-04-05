@@ -1,7 +1,7 @@
 <?php include './utils/header.php';
 $manager = new Manager();
 
-$getDestinationByTour = $manager->getOperatorByDestination($_GET["location"]);
+$getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"]);
 $getReviews           = $manager->getAllReviewByOperatorId();
 
 ?>
@@ -52,7 +52,6 @@ $getReviews           = $manager->getAllReviewByOperatorId();
                             <h5 class="modal-title" id="exampleModalLabel">Your review</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                
                         <div class="modal-body">
                             <form action="/comparOperator/process/add_review.php" method="post">
                                 <div class="mb-3">
@@ -80,49 +79,20 @@ $getReviews           = $manager->getAllReviewByOperatorId();
                                 </div>
                             </form>
                         </div>
-                
-                    </div>
-
-            
-                    <div class="modal-body">
-                        <form action="/comparOperator/process/add_review.php" method="post">
-                            <div class="mb-3">
-                                <label for="author" class="col-form-label">Pseudo:</label>
-                                <input type="text" name="author" id="author" placeholder="Enter your pseudonym here" class="form-control">
-                            </div>
-                            <input type="hidden" name="tour_operator_id" value="<?=$destination->getTourOperatorId()?>">
-                            <div class="mb-3">
-                                <label for="message" class="col-form-label">Message:</label>
-                                <textarea name="message" class="form-control" id="message" placeholder="Write your comment here"></textarea>
-                            </div>
-                            <label for="rating">Rating:</label>
-                            <input type="hidden" name="count" value="1">
-                            <select name="rating" id="rating">
-                                <option value="0">0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-            
-                            <div class="my-3">
-                                <button type="submit" class="btn btn-primary">Send message</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                         <?php
-                            foreach ($getReviews as $review)
-                            { ?>
-                                <div>
-                                    <h2><?=$review->getAuthor()?>:</h2>
-                                    <h2><?=$review->getMessage()?>:</h2>
-                                </div>
+                        <div class="modal-footer">
+                            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                                <?php foreach ($getReviews as $review)
+                                { 
+                                ?>
+                                    <div>
+                                        <h2><?=$review->getAuthor()?>:</h2>
+                                        <h2><?=$review->getMessage()?>:</h2>
+                                    </div>
                                 <?php
-                            } ?>
-                    </div>
+                                } 
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
