@@ -35,7 +35,7 @@ $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"
                     <?php
                         }
                     ?>
-                    <td><?=$operator->getGrade();?> (<?= $operator->getGradeCount();?> reviews)</td>
+                    <td><?=$operator->getGrade();?> / 5 (<?= $operator->getGradeCount();?> ratings)</td>
                     <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$destination->getTourOperatorId()?>" data-bs-whatever="@mdo">Comment here</button></td>
                 </tr>
             </tbody>

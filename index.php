@@ -22,6 +22,7 @@ $distinctLocation = $manager->getAllLocations();
     ?>
 
 </div>
+
 <?php include './utils/footer.php';?>
 
 
