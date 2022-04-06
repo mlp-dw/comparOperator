@@ -55,6 +55,7 @@ $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"
                                     <input type="text" name="author" id="author" placeholder="Enter your pseudonym here" class="form-control">
                                 </div>
                                 <input type="hidden" name="tour_operator_id" value="<?=$destination->getTourOperatorId()?>">
+                                <input type="hidden" name="id-destination" value="<?=$destination->getId()?>">
                                 <div class="mb-3">
                                     <label for="message" class="col-form-label">Message:</label>
                                     <textarea name="message" class="form-control" id="message" placeholder="Write your comment here"></textarea>
