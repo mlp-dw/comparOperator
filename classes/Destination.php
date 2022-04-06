@@ -15,9 +15,9 @@ class Destination {
     {
         $this->id = $data['id'] ?? null;
         $this->location = $data['location'] ;
-        $this->price = $data['price'] ;
+        $this->price = $data['price'] ?? null;
         $this->image = $data['image'] ;
-        $this->tourOperatorId = $data['tour_operator_id'] ;
+        $this->tourOperatorId = $data['tour_operator_id'] ?? null ;
     }
 
     public function __construct($data){

@@ -1,5 +1,4 @@
 <?php 
-
 class Manager {
     private $bdd;
 
@@ -40,12 +39,15 @@ class Manager {
     
     public function getAllDestinations(){  
         $data = $this->bdd->selectAll(Destination::$TABLE_DESTINATION);
-
-        function destinationToObject($sql){
-            return new Destination($sql);
-        }
-        $newData = array_map("destinationToObject", $data);  
+        $newData = array_map(function ($sql) {return new Destination($sql);}, $data); 
         return $newData;
+    }
+
+    public function getAllLocations(){
+        $data = $this->bdd->selectDistinct("location, image", Destination::$TABLE_DESTINATION);
+        $newData = array_map(function ($sql) {return new Destination($sql);}, $data);
+        return $newData;
+        
     }
 
     public function getDestination($id){
@@ -55,10 +57,7 @@ class Manager {
 
     public function getOperatorByDestination($value){
         $data = $this->bdd->selectAllWhere(Destination::$TABLE_DESTINATION, "location", $value);
-        function operatorDestinationToObject($sql){
-            return new Destination($sql);
-        }
-        $newData = array_map("operatorDestinationToObject", $data);  
+        $newData = array_map(function ($sql) {return new Destination($sql);}, $data);  
         return $newData;
     }
     

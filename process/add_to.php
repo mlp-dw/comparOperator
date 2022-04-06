@@ -10,3 +10,4 @@ $manager = new Manager;
 
 $manager->createTourOperator($to);
 
+header("Location: ../admin.php?success=Tour Operator added !");
