@@ -20,13 +20,14 @@ $getAllDestinations = $manager->getAllLocations();
                             <form action="../process/add_offer.php" method="POST" name="offer">
                                 <div class="form-group d-flex flex-column">
                                     <label for="location">Destination :</label>
-                                    <select id="location" name="tour_operator_id" class="m-2">
+                                    <select id="location" name="destination" class="m-2">
                                         <?php foreach ($getAllDestinations as $destination) : ?>
-                                            <option value="<?= $destination->getTourOperatorId() ?>"><?= $destination->getLocation() ?></option>
-                                        <?php endforeach; ?>
+                                            <option value="<?= $destination->getLocation() ?>"><?= $destination->getLocation() ?></option>
+                                            <?php endforeach; ?>
+                                            <input type="hidden" name="image" value="<?=$destination->getImage()?>">
                                     </select>
                                     <label for="tour-operator">Tour Operator :</label>
-                                    <select id="tour-operator" name="tour_operator_id" class="m-2">
+                                    <select id="tour-operator" name="tour_operator" class="m-2">
                                         <?php foreach ($getAllTO as $tour) : ?>
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                                         <?php endforeach; ?>

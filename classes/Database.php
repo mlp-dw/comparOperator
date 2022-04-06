@@ -67,8 +67,16 @@ class Database {
         return $data;
     }
     
-    public function selectDistinct($field,  $table){
+    public function selectDistinct($field, $table){
         $request = $this->db->prepare("SELECT DISTINCT $field FROM $table");
+        $request->execute();
+        $data = $request->fetchAll();
+
+        return $data;
+    }
+
+    public function selectDistinctWhere($field, $table, $key, $value){
+        $request = $this->db->prepare("SELECT DISTINCT $field FROM $table WHERE $key = '$value'");
         $request->execute();
         $data = $request->fetchAll();
 
