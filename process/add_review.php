@@ -18,3 +18,9 @@ $rating = array(
     'grade_total' => $operator->getGradeTotal() + $_POST["rating"]
 );
 $manager->addRating($id, $rating);
+
+// REDIRECTION-----------------------------
+$idDestination = $_POST["id-destination"];
+$destination = $manager->getDestination($idDestination);
+
+header("Location: ../destination.php?location=" . $destination->getLocation());
