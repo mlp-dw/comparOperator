@@ -88,8 +88,8 @@ $distinctLocation = $manager->getAllLocations();
                             <label for="card<?=$destination->getId();?>" class="button return" aria-hidden="true">
                                 <i class="fas fa-arrow-left"></i>
                             </label>
+                            <a type="button" id="offer" href="/comparOperator/destination.php?location=<?=$destination->getLocation()?>" class="btn btn-primary">See all offers</a>                        </div>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
