@@ -77,4 +77,10 @@ class Manager {
         $this->bdd->update(TourOperator::$TABLE_TO, $tourOperator->getId(), ["is_premium"=>$value]);
     }
 
+    public function properImage($value)
+    {
+        $data = $this->bdd->selectDistinctWhere("location, image", Destination::$TABLE_DESTINATION, "location", $value);
+        return $data;
+    }
+
 }
