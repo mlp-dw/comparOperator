@@ -44,7 +44,7 @@ class Manager {
     }
 
     public function getAllLocations(){
-        $data = $this->bdd->selectDistinct("location, image", Destination::$TABLE_DESTINATION);
+        $data = $this->bdd->selectDistinct("id, location, image", Destination::$TABLE_DESTINATION);
         $newData = array_map(function ($sql) {return new Destination($sql);}, $data);
         return $newData;
         
