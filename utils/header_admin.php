@@ -35,8 +35,8 @@ include __DIR__ . "/../config/autoload.php";
           <ul class="list-unstyled">
             <li><a href="/comparOperator/admin_pages/add_tourOperator.php" class="text-white">Add a Tour Operator</a></li>
             <li><a href="/comparOperator/admin_pages/add_destination.php" class="text-white">Add Destination</a></li>
+            <li><a href="/comparOperator/admin_pages/add_offer.php" class="text-white">Add Offer</a></li>
             <li><a href="/comparOperator/admin_pages/pass_premium.php" class="text-white">Pass Premium</a></li>
-            <li><a href="" class="text-white">//</a></li>
             <li><a href="" class="text-white">//</a></li>
           </ul>
         </div>

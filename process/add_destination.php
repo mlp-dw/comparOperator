@@ -10,3 +10,6 @@ $where = new Destination($data);
 $manager = new Manager;
 
 $manager->createDestination($where);
+
+header("Location: ../admin.php?success=Destination added !");
+

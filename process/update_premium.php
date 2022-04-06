@@ -5,3 +5,5 @@ $manager = new Manager;
 
 $operator = $manager->getOperator($data);
 $manager->updateOperatorPremiumStatus($operator);
+
+header("Location: ../admin.php?success=" . $operator->getName() . " pass premium !");

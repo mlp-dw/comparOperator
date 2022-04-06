@@ -12,24 +12,27 @@
                                 </div>
                             </div>
                             <form action="../process/add_to.php" method="POST" name="tour_operator">
-                                <div class="form-group">
-                                    <label for="">Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" aria-describedby="name" placeholder="set name">
-                                    <label for="">Link</label>
-                                    <input type="text" name="link" class="form-control" id="link" aria-describedby="link" placeholder="set link">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="1" name="is_premium" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Premium
-                                        </label>
+                                <div class="form-group d-flex flex-column">
+                                    <label for="name">Name :</label>
+                                    <input type="text" name="name" class="form-control m-2" id="name" aria-describedby="name" placeholder="set name">
+                                    <label for="link">Link :</label>
+                                    <input type="text" name="link" class="form-control m-2" id="link" aria-describedby="link" placeholder="set link">
+                                    <label for="link">Premium :</label>
+                                    <div class="d-flex flex-row justify-content-around">
+                                        <div class="form-check m-2">
+                                            <input class="form-check-input" type="checkbox" value="0" name="is_premium" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Normal
+                                            </label>
+                                        </div>                       
+                                        <div class="form-check m-2">
+                                            <input class="form-check-input" type="checkbox" value="1" name="is_premium" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Premium
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="0" name="is_premium" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            Normal
-                                        </label>
-                                    </div>                       
-                                    <div class="col-md-12 text-center ">
+                                    <div class="col-md-12 text-center my-2">
                                         <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">add new tour operator</button>
                                     </div>
                                 </div>

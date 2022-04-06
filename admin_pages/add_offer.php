@@ -2,6 +2,7 @@
 include '../utils/header_admin.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
+$getAllDestinations = $manager->getAllLocations();
 
 ?>
 
@@ -13,25 +14,28 @@ $getAllTO = $manager->getAllOperator();
                         <div class="myform form">
                             <div class="logo mb-3">
                                 <div class="col-md-12 text-center">
-                                    <h1>ADD DESTINATION</h1>
+                                    <h1>ADD OFFER</h1>
                                 </div>
                             </div>
-                            <form action="../process/add_destination.php" method="POST" name="destination">
+                            <form action="../process/add_offer.php" method="POST" name="offer">
                                 <div class="form-group d-flex flex-column">
-                                    <label for="location">Location :</label>
-                                    <input type="text" name="location" class="form-control m-2" id="location" placeholder="Your location here">
-                                    <label for="price">Price :</label>
-                                    <input type="text" name="price" class="form-control m-2" id="price" placeholder="Your price here">
+                                    <label for="location">Destination :</label>
+                                    <select id="location" name="tour_operator_id" class="m-2">
+                                        <?php foreach ($getAllDestinations as $destination) : ?>
+                                            <option value="<?= $destination->getTourOperatorId() ?>"><?= $destination->getLocation() ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
                                     <label for="tour-operator">Tour Operator :</label>
                                     <select id="tour-operator" name="tour_operator_id" class="m-2">
                                         <?php foreach ($getAllTO as $tour) : ?>
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
                                         <?php endforeach; ?>
                                     </select>
-                                    <label for="image">Image :</label>
-                                    <input type="text" name="image" placeholder="http://...." class="m-2" id="image">
-                                <div class="col-md-12 text-center">
-                                    <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+                                    <label for="price">Price :</label>
+                                    <input type="text" name="price" class="form-control m-2" id="price" placeholder="Your price here">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
