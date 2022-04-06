@@ -66,4 +66,12 @@ class Database {
 
         return $data;
     }
+    
+    public function selectDistinct($field,  $table){
+        $request = $this->db->prepare("SELECT DISTINCT $field FROM $table");
+        $request->execute();
+        $data = $request->fetchAll();
+
+        return $data;
+    }
 }

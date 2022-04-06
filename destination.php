@@ -1,11 +1,7 @@
 <?php include './utils/header.php';
 $manager = new Manager();
-
 $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"]);
-
 ?>
-
-<!-- START MODAL -->
 
 <div class="d-flex justify-content-center my-5">
     <table class="align-items-center justify-content-center w-50 table table-info table-striped text-center">
@@ -79,14 +75,14 @@ $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer">
-                            <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                        <div class="m-3">
+                            <div data-bs-spy="scroll" data-bs-offset="0" class="scrollspy-example" tabindex="0">
                                 <?php foreach ($getReviews as $review)
                                 { 
                                 ?>
                                     <div>
                                         <h2><?=$review->getAuthor()?>:</h2>
-                                        <h2><?=$review->getMessage()?>:</h2>
+                                        <p><?=$review->getMessage()?>:</p>
                                     </div>
                                 <?php
                                 } 
