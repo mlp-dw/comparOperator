@@ -31,7 +31,7 @@ $distinctLocation = $manager->getAllLocations();
     <div>
         
         <div class="card">
-            <input type="checkbox" id="card<?=$destination->getId();?>" class="more" aria-hidden="true">
+            <input type="checkbox" id="card<?=$destination->getLocation();?>" class="more" aria-hidden="true">
             <div class="content">
                 <div class="front" style="background-image: url('<?=$destination->getImage();?>')">
                     <div class="inner">
@@ -43,7 +43,7 @@ $distinctLocation = $manager->getAllLocations();
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
                         </div>
-                        <label for="card<?=$destination->getId();?>" class="button" aria-hidden="true">
+                        <label for="card<?=$destination->getLocation();?>" class="button" aria-hidden="true">
                             Details
                         </label>
                     </div>
@@ -85,7 +85,7 @@ $distinctLocation = $manager->getAllLocations();
                                 tenetur nemo amet temporibus, enim soluta nam, debitis.</p>
                         </div>
                         <div class="location"><?=$destination->getLocation()?></div>
-                            <label for="card<?=$destination->getId();?>" class="button return" aria-hidden="true">
+                            <label for="card<?=$destination->getLocation();?>" class="button return" aria-hidden="true">
                                 <i class="fas fa-arrow-left"></i>
                             </label>
                             <a type="button" id="offer" href="/comparOperator/destination.php?location=<?=$destination->getLocation()?>" class="btn btn-primary">See all offers</a>                        </div>
