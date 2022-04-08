@@ -3,43 +3,37 @@ $manager = new Manager();
 $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"]);
 ?>
 
-<div class="d-flex justify-content-center my-5">
-    <table class="align-items-center justify-content-center w-50 table table-info table-striped text-center">
-        <thead >
-            <tr>
-                <th scope="col">Island</th>
-                <th scope="col">Price</th>
-                <th scope="col">Tour Operator</th>
-                <th scope="col">Rating</th>
-                <th scope="col">Comment</th>
-            </tr>
-        </thead>
-        
-        <?php
+<?php
         foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
             $getReviews = $manager->getAllReviewByOperatorId($operator->getId());
-            ?>
-            <tbody class="w-50">
-                <tr>
-                    <td><?=$destination->getLocation()?></td>
-                    <td><?=$destination->getPrice()?></td>
-                    <?php
-                        if($operator->getIsPremium() == 1){
-                    ?>
-                        <td><a target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></td>
-                    <?php
-                        }else{
-                    ?>
-                        <td><?=$operator->getName();?></td>
-                    <?php
-                        }
-                    ?>
-                    <td><?=$operator->getGrade();?> / 5 (<?= $operator->getGradeCount();?> ratings)</td>
-                    <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$destination->getTourOperatorId()?>" data-bs-whatever="@mdo">Comment here</button></td>
-                </tr>
-            </tbody>
-            <!-- ----------------------------------------------------------------------------------------------------------------------
+        ?>
+
+            <div class="container">
+            
+                <div class="card card2">
+                    <i class="fas fa-arrow-right"></i>
+                    <p class="to fs-6"><?=$operator->getName();?></p>
+                    <div class="<?=$destination->getLocation()?>">
+                        <h3><?=$destination->getLocation()?></h3>
+                        <p><?=$destination->getPrice()?> ฿</p>
+                        <?php
+                            if($operator->getIsPremium() == 1){
+                        ?>
+                            <p><a target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></p>
+                        <?php
+                            }else{
+                        ?>
+                            <p><?=$operator->getName();?></p>
+                        <?php
+                            }
+                        ?>
+                        <p><?=$operator->getGrade();?> / 5 (<?= $operator->getGradeCount();?> ratings)</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?=$destination->getTourOperatorId()?>" data-bs-whatever="@mdo"><i class="fas fa-arrow-right"></i></button>
+                </div>
+
+                  <!-- ----------------------------------------------------------------------------------------------------------------------
             MODAL COMMENT -->
             <div class="modal fade" id="exampleModal<?=$destination->getTourOperatorId()?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -94,11 +88,9 @@ $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"
                 </div>
             </div>
             <!-- END MODAL-------------------------------------------------------------------------------------------------------------------- -->
+            </div>
         <?php
         }
-    ?>
-    </table>
-</div>
-
+        ?>
 
 <?php include './utils/footer.php';?>
