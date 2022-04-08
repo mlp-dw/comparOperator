@@ -8,21 +8,11 @@ h1,h2,h3,h4,h5,h6{
 p{
   font-family: "Indie Flower";
 }
-/* body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: "Montserrat", sans-serif;
-}
 
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-} */
+.d-flex{
+  background-image: url("https://wallpaperaccess.com/full/2222767.jpg");
+  background-size: center;
+}
 
 .card {
   width: 420px;
@@ -243,4 +233,11 @@ p{
 #offer{
   background-color: #1a8a9e;
   padding: 0;
+}
+
+.logo
+{
+  height: 50%;
+  width: 50%;
+  border-radius: 35%;
 }
