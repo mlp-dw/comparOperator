@@ -2,10 +2,10 @@
 include '../utils/alert.php';
 ?>
 
-    <section>
+    <section id="admin-forms">
         <div class="container">
             <div class="row">
-                <div class="col-md-5 mx-auto">
+                <div class="admin-form col-md-5 mx-auto">
                     <div id="first">
                         <div class="myform form">
                             <div class="logo mb-3">
@@ -23,19 +23,19 @@ include '../utils/alert.php';
                                     <div class="d-flex flex-row justify-content-around">
                                         <div class="form-check m-2">
                                             <input class="form-check-input" type="checkbox" value="0" name="is_premium" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
+                                            <label class="form-check-label rounded-pill" for="flexCheckDefault">
                                                 Normal
                                             </label>
                                         </div>                       
                                         <div class="form-check m-2">
                                             <input class="form-check-input" type="checkbox" value="1" name="is_premium" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
+                                            <label class="form-check-label rounded-pill" for="flexCheckDefault">
                                                 Premium
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-md-12 text-center my-2">
-                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">add new tour operator</button>
+                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">add new tour operator</button>
                                     </div>
                                 </div>
                             </form>
