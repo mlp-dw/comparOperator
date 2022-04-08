@@ -1,19 +1,23 @@
-
-   #icon {
-    opacity: 0;
-    font-size: 18px;
-    color: #fff;
-    will-change: transform;
-    -webkit-transform: scale(0.1);
-    transform: scale(0.1);
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  h2 {
-    pointer-events: none;
-  }
-  
+#icon {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+h2 {
+  pointer-events: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover{
+  font-weight: bolder;
+  text-decoration: underline;
+}
   
   /* .container {
     width: 100%;
@@ -27,7 +31,7 @@
     position: relative;
     width: 500px;
     height: 200px;
-    background-color: #fff;
+    background-color: #ffffff;
     overflow: hidden;
     margin-bottom: 4px;
   }
@@ -54,17 +58,6 @@
     height: 16px;
     border-radius: 16px;
     background-color: #E6E5E1;
-  }
-  
-  .container .card h2 {
-    z-index: 99;
-    font-family: "Poppins", sans-serif;
-    position: absolute;
-    bottom: 0;
-    right: 130px;
-    font-size: 60px;
-    font-weight: 700;
-    color: #fff;
   }
   .container .card .fa-arrow-right {
     z-index: 100;
@@ -110,13 +103,13 @@
     font-size: 2rem;
 
   }
-  .container .card button {
+  .container .card2 button {
     position: absolute;
     right: 14px;
     bottom: 14px;
     width: 30px;
     height: 30px;
-    background-color: #DA4D1D;
+    background-color: #534fc5;
     border: none;
     border-radius: 30px;
     cursor: pointer;
@@ -130,98 +123,182 @@
   .container .card:hover button {
     transform: scale(16.5);
   }
-  .container .card:hover p {
-    color: #fff;
+
+
+  
+  
+  .container .card:hover p.star {
+    color: #f0c827;
+  }
+  .backg{
+    background: linear-gradient(-40deg, rgba(67, 138, 243, 0.6), rgba(255, 242, 166, 0.6));
   }
   
-  .container .card2 button {
-      background-color: #534fc5;
-    }
-    .container .card .Drum {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-    }
-    .container .card2 .Drum {
-        background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
-    }
-    .container .card:hover .Drum {
-      filter: grayscale(0);
-    }
-    
-    .container .card .Dressrosa {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-      }
-    .container .card2 .Dressrosa {
-        background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
-      }
-      .container .card:hover .Dressrosa {
-        filter: grayscale(0);
-      }
 
-      
-      .container .card .Wa-no-Kuni {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-      }
-    .container .card2 .Wa-no-Kuni {
-        background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
-      }
-      .container .card:hover .Wa-no-Kuni {
-        filter: grayscale(0);
-      }
-      
-      .container .card .Water-Seven {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-      }
-    .container .card2 .Water-Seven {
-        background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
-      }
-      .container .card:hover .Water-Seven {
-        filter: grayscale(0);
-      }
-      .container .card .Kokoyashi {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-      }
-    .container .card2 .Kokoyashi {
-        background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
-      }
-      .container .card:hover .Kokoyashi {
-        filter: grayscale(0);
-      }
-      .container .card .Amazon-Lily {
-        z-index: 100;
-        width: 400px;
-        height: 200px;
-        background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
-        background-size: 100% 100%;
-        filter: grayscale(100%);
-      }
-    .container .card2 .Amazon-Lily {
-        background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
-      }
-      .container .card:hover .Amazon-Lily {
-        filter: grayscale(0);
-      }
+
+/* DRUM----------------------------------------------- */
+.container .card .Drum {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Drum {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+}
+.container .card:hover .Drum {
+filter: grayscale(0);
+}
+/* DRESSROSA----------------------------------------------- */
+.container .card .Dressrosa {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Dressrosa {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+}
+.container .card:hover .Dressrosa {
+  filter: grayscale(0);
+}    
+/* WA NO KUNI----------------------------------------------- */
+.container .card .Wa-no-Kuni {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Wa-no-Kuni {
+  background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+}
+.container .card:hover .Wa-no-Kuni {
+  filter: grayscale(0);
+}
+/* WATER 7----------------------------------------------- */
+.container .card .Water-Seven {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Water-Seven {
+  background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+}
+.container .card:hover .Water-Seven {
+  filter: grayscale(0);
+}
+/* KOKOYASHI----------------------------------------------- */
+.container .card .Kokoyashi {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Kokoyashi {
+  background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+}
+.container .card:hover .Kokoyashi {
+  filter: grayscale(0);
+}
+/* AMAZON LILY----------------------------------------------- */
+.container .card .Amazon-Lily {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Amazon-Lily {
+  background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+}
+.container .card:hover .Amazon-Lily {
+  filter: grayscale(0);
+}
+  /* OHARA----------------------------------------------- */
+.container .card .Ohara {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Ohara {
+  background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+}
+.container .card:hover .Ohara {
+  filter: grayscale(0);
+}
+/* FUSHIA----------------------------------------------- */
+.container .card .Fushia {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Fushia {
+  background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+}
+.container .card:hover .Fushia {
+  filter: grayscale(0);
+}
+/* SABOADY----------------------------------------------- */
+.container .card .Saboady {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Saboady {
+  background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+}
+.container .card:hover .Saboady {
+  filter: grayscale(0);
+}
+/* BARATIE----------------------------------------------- */
+.container .card .Baratie {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Baratie {
+  background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+}
+.container .card:hover .Baratie {
+  filter: grayscale(0);
+}
+/* WEATHERIA----------------------------------------------- */
+.container .card .Weatheria {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+  background-size: cover;
+  filter: grayscale(100%);
+}
+.container .card2 .Weatheria {
+  background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+}
+.container .card:hover .Weatheria {
+  filter: grayscale(0);
+}
+

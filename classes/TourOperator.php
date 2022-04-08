@@ -57,7 +57,7 @@ class TourOperator{
         if ($this->gradeCount == 0 || $this->gradeTotal == 0) {
             return 0;
         }
-        return number_format($this->gradeTotal / $this->gradeCount, 1);//moyenne
+        return number_format($this->gradeTotal / $this->gradeCount, 0);//moyenne
     }
 
     public function getIsPremium(){

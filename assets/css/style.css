@@ -1,9 +1,11 @@
 * {
   box-sizing: border-box;
 }
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+English+SC");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
 
 h1,h2,h3,h4,h5,h6{
-  font-family: "IM Fell English SC";
+  font-family: "Indie Flower";
 }
 p{
   font-family: "Indie Flower";
@@ -123,14 +125,14 @@ p{
   color: #355cc9;
   grid-row: 3;
 }
-.back .info:not(:first-of-type):before {
+/* .back .info:not(:first-of-type):before {
   content: "";
   position: absolute;
   left: -0.9em;
   height: 18px;
   width: 1px;
   background-color: #ccc;
-}
+} */
 .back .info span {
   font-size: 2em;
   font-weight: 700;
@@ -138,11 +140,11 @@ p{
 .back .info i {
   font-size: 1.2em;
 }
-.back .info i:before {
+/* .back .info i:before {
   background: linear-gradient(40deg, #355cc9, #438af3);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-}
+} */
 .back .info .icon {
   margin-left: 0.3em;
 }
