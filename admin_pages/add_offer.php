@@ -7,7 +7,7 @@ $getAllDestinations = $manager->getAllLocations();
 
 ?>
 
-    <section>
+    <section id="admin-forms">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
