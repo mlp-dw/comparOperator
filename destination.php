@@ -59,11 +59,11 @@ function starRating($operator){
                             <?php
                                 if($operator->getIsPremium() == 1){
                             ?>
-                                <p class="fs-4 px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></p>
+                                <p class="fs-4 fw-bold px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></p>
                             <?php
                                 }else{
                             ?>
-                                <p class="fs-4 px-3"><?=$operator->getName();?></p>
+                                <p class="fs-4 fw-bold px-3"><?=$operator->getName();?></p>
                             <?php
                                 }
                             ?>
