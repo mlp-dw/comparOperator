@@ -27,7 +27,6 @@ a {
   height: 200px;
   background-color: #ffffff;
   overflow: hidden;
-  margin-bottom: 4px;
 }
 .container .card:before {
   content: "";
@@ -74,22 +73,6 @@ a {
   transition: all 0.2s ease;
 }
 
-.container .card .social i:nth-of-type(1) {
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
-}
-.container .card .social i:nth-of-type(2) {
-  -webkit-transition-delay: 0.3s;
-  transition-delay: 0.3s;
-}
-.container .card .social i:nth-of-type(3) {
-  -webkit-transition-delay: 0.2s;
-  transition-delay: 0.2s;
-}
-.container .card .social i:nth-of-type(4) {
-  -webkit-transition-delay: 0.1s;
-  transition-delay: 0.1s;
-}
 .container .card:hover #icon {
   opacity: 1;
   -webkit-transform: scale(1);
@@ -117,10 +100,14 @@ a {
 .container .card:hover button {
   transform: scale(16.5);
 }
+.container .card p.star {
+  font-size: 1.5vh;
+}
 .container .card:hover p.star {
   color: #f0c827;
 }
 .backg{
+  height: 100%;
   background: linear-gradient(-40deg, rgba(67, 138, 243, 0.6), rgba(255, 242, 166, 0.6));
 }
   
@@ -136,6 +123,7 @@ a {
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Drum {
   background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
@@ -153,6 +141,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Dressrosa {
   background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
@@ -170,6 +159,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Wa-no-Kuni {
   background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
@@ -187,6 +177,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Water-Seven {
   background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
@@ -204,6 +195,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Kokoyashi {
   background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
@@ -221,6 +213,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Amazon-Lily {
   background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
@@ -238,6 +231,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Ohara {
   background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
@@ -255,6 +249,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Fushia {
   background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
@@ -272,6 +267,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Saboady {
   background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
@@ -289,6 +285,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Baratie {
   background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
@@ -306,6 +303,7 @@ filter: grayscale(0);
   background-attachment: center;
   background-repeat: no-repeat;
   filter: grayscale(100%);
+  font-size: 2.5vh;
 }
 .container .card2 .Weatheria {
   background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
@@ -314,3 +312,715 @@ filter: grayscale(0);
   filter: grayscale(0);
 }
 
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+  .container .card {
+  position: relative;
+  width: 80%;
+  height: 20%;
+  background-color: #ffffff;
+  overflow: hidden;
+  }
+  .container .card p.star {
+    font-size: 1vh;
+  }
+  /* AMAZON LILY----------------------------------------------- */
+  .container .card .Amazon-Lily {
+    z-index: 100;
+    width: 75%;
+    height: 20%;
+    font-size: 2vh;
+    background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+  }
+  .container .card .Amazon-Lily h3, p{
+    font-size: 2vh;
+  }
+  /* DRUM----------------------------------------------- */
+  .container .card .Drum {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Drum h3, p{
+    font-size: 2vh;
+  }
+  /* DRESSROSA----------------------------------------------- */
+  .container .card .Dressrosa {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Dressrosa h3, p{
+    font-size: 2vh;
+  }
+  /* WA NO KUNI----------------------------------------------- */
+  .container .card .Wa-no-Kuni {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Wa-no-Kuni h3, p{
+    font-size: 2vh;
+  }
+  /* WATER 7----------------------------------------------- */
+  .container .card .Water-Seven {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Water-Seven h3, p{
+    font-size: 2vh;
+  }
+  /* KOKOYASHI----------------------------------------------- */
+  .container .card .Kokoyashi {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Kokoyashi h3, p{
+    font-size: 2vh;
+  }
+  /* OHARA----------------------------------------------- */
+  .container .card .Ohara {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Ohara h3, p{
+    font-size: 2vh;
+  }
+  /* FUSHIA----------------------------------------------- */
+  .container .card .Fushia {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Fushia h3, p{
+    font-size: 2vh;
+  }
+  /* SABOADY----------------------------------------------- */
+  .container .card .Saboady {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Saboady h3, p{
+    font-size: 2vh;
+  }
+  /* BARATIE----------------------------------------------- */
+  .container .card .Baratie {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Baratie h3, p{
+    font-size: 2vh;
+  }
+  /* WEATHERIA----------------------------------------------- */
+  .container .card .Weatheria {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Weatheria h3, p{
+    font-size: 2vh;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container .card {
+  position: relative;
+  width: 80%;
+  height: 20%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+  /* AMAZON LILY----------------------------------------------- */
+  .container .card .Amazon-Lily {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    font-size: 2vh;
+    background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+  }
+  .container .card .Amazon-Lily h3, p{
+    font-size: 1.75vh;
+  }
+  /* DRUM----------------------------------------------- */
+  .container .card .Drum {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Drum h3, p{
+    font-size: 1.75vh;
+  }
+  /* DRESSROSA----------------------------------------------- */
+  .container .card .Dressrosa {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Dressrosa h3, p{
+    font-size: 1.75vh;
+  }
+  /* WA NO KUNI----------------------------------------------- */
+  .container .card .Wa-no-Kuni {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Wa-no-Kuni h3, p{
+    font-size: 1.75vh;
+  }
+  /* WATER 7----------------------------------------------- */
+  .container .card .Water-Seven {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Water-Seven h3, p{
+    font-size: 1.75vh;
+  }
+  /* KOKOYASHI----------------------------------------------- */
+  .container .card .Kokoyashi {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Kokoyashi h3, p{
+    font-size: 1.75vh;
+  }
+  /* OHARA----------------------------------------------- */
+  .container .card .Ohara {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Ohara h3, p{
+    font-size: 1.75vh;
+  }
+  /* FUSHIA----------------------------------------------- */
+  .container .card .Fushia {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Fushia h3, p{
+    font-size: 1.75vh;
+  }
+  /* SABOADY----------------------------------------------- */
+  .container .card .Saboady {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Saboady h3, p{
+    font-size: 1.75vh;
+  }
+  /* BARATIE----------------------------------------------- */
+  .container .card .Baratie {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Baratie h3, p{
+    font-size: 1.75vh;
+  }
+  /* WEATHERIA----------------------------------------------- */
+  .container .card .Weatheria {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 2vh;
+  }
+  .container .card .Weatheria h3, p{
+    font-size: 1.75vh;
+  }
+  .container .card p.star {
+    font-size: 1vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container .card {
+  position: relative;
+  width: 80%;
+  height: 20%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+  /* AMAZON LILY----------------------------------------------- */
+  .container .card .Amazon-Lily {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    font-size: 1.75vh;
+    background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+  }
+  .container .card .Amazon-Lily h3, p{
+    font-size: 1.55vh;
+  }
+  /* DRUM----------------------------------------------- */
+  .container .card .Drum {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size:  1.75vh;
+  }
+  .container .card .Drum h3, p{
+    font-size: 1.55vh;
+  }
+  /* DRESSROSA----------------------------------------------- */
+  .container .card .Dressrosa {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Dressrosa h3, p{
+    font-size: 1.55vh;
+  }
+  /* WA NO KUNI----------------------------------------------- */
+  .container .card .Wa-no-Kuni {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Wa-no-Kuni h3, p{
+    font-size: 1.55vh;
+  }
+  /* WATER 7----------------------------------------------- */
+  .container .card .Water-Seven {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Water-Seven h3, p{
+    font-size: 1.55vh;
+  }
+  /* KOKOYASHI----------------------------------------------- */
+  .container .card .Kokoyashi {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Kokoyashi h3, p{
+    font-size: 1.55vh;
+  }
+  /* OHARA----------------------------------------------- */
+  .container .card .Ohara {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Ohara h3, p{
+    font-size: 1.55vh;
+  }
+  /* FUSHIA----------------------------------------------- */
+  .container .card .Fushia {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Fushia h3, p{
+    font-size: 1.55vh;
+  }
+  /* SABOADY----------------------------------------------- */
+  .container .card .Saboady {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Saboady h3, p{
+    font-size: 1.55vh;
+  }
+  /* BARATIE----------------------------------------------- */
+  .container .card .Baratie {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Baratie h3, p{
+    font-size: 1.55vh;
+  }
+  /* WEATHERIA----------------------------------------------- */
+  .container .card .Weatheria {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.75vh;
+  }
+  .container .card .Weatheria h3, p{
+    font-size: 1.55vh;
+  }
+  .container .card p.star {
+    font-size: 1vh;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .container .card {
+  position: relative;
+  width: 80%;
+  height: 20%;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+  /* AMAZON LILY----------------------------------------------- */
+  .container .card .Amazon-Lily {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    font-size: 1.5vh;
+    background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+  }
+  .container .card .Amazon-Lily h3, p{
+    font-size: 1.5vh;
+  }
+  /* DRUM----------------------------------------------- */
+  .container .card .Drum {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size:  1.5vh;
+  }
+  .container .card .Drum h3, p{
+    font-size: 1.5vh;
+  }
+  /* DRESSROSA----------------------------------------------- */
+  .container .card .Dressrosa {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Dressrosa h3, p{
+    font-size: 1.5vh;
+  }
+  /* WA NO KUNI----------------------------------------------- */
+  .container .card .Wa-no-Kuni {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Wa-no-Kuni h3, p{
+    font-size: 1.5vh;
+  }
+  /* WATER 7----------------------------------------------- */
+  .container .card .Water-Seven {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Water-Seven h3, p{
+    font-size: 1.5vh;
+  }
+  /* KOKOYASHI----------------------------------------------- */
+  .container .card .Kokoyashi {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Kokoyashi h3, p{
+    font-size: 1.5vh;
+  }
+  /* OHARA----------------------------------------------- */
+  .container .card .Ohara {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Ohara h3, p{
+    font-size: 1.5vh;
+  }
+  /* FUSHIA----------------------------------------------- */
+  .container .card .Fushia {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Fushia h3, p{
+    font-size: 1.5vh;
+  }
+  /* SABOADY----------------------------------------------- */
+  .container .card .Saboady {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Saboady h3, p{
+    font-size: 1.5vh;
+  }
+  /* BARATIE----------------------------------------------- */
+  .container .card .Baratie {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Baratie h3, p{
+    font-size: 1.5vh;
+  }
+  /* WEATHERIA----------------------------------------------- */
+  .container .card .Weatheria {
+    z-index: 100;
+    width: 75%;
+    height: 100%;
+    background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
+    background-size: cover;
+    background-attachment: center;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    font-size: 1.5vh;
+  }
+  .container .card .Weatheria h3, p{
+    font-size: 1.5vh;
+  }
+}
