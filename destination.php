@@ -12,7 +12,7 @@ $getOperatorsBydestination = $manager->getOperatorByDestination($_GET["location"
             <div class="container">
             
                 <div class="card card2">
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" id="icon"></i>
                     <p class="to fs-6"><?=$operator->getName();?></p>
                     <div class="<?=$destination->getLocation()?>">
                         <h3><?=$destination->getLocation()?></h3>
