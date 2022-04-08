@@ -26,20 +26,6 @@ include __DIR__ . "/../config/autoload.php";
 <header>
 
   <div class="bg-dark collapse" id="navbarHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 col-md-7 py-4">
-          <h4 class="text-white">A propos</h4>
-          <p class="text-muted"></p>
-        </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Actions</h4>
-          <ul class="list-unstyled">
-            
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
     <div class="navbar navbar-dark bg-dark shadow-sm">
       <div class="container">
@@ -47,7 +33,7 @@ include __DIR__ . "/../config/autoload.php";
         <a href="/comparOperator/index.php">
           <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
         </a>
-        <li><a href="/comparOperator/admin.php" class="text-white">admin</a></li>
+        <li><a href="/comparOperator/admin.php" class="text-white">Admin Mode</a></li>
     </div>
   </div>
 </header>

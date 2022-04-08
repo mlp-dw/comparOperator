@@ -7,7 +7,7 @@ $getAllDestinations = $manager->getAllLocations();
 
 ?>
 
-    <section>
+    <section id="admin-forms">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
@@ -36,7 +36,7 @@ $getAllDestinations = $manager->getAllLocations();
                                     <label for="price">Price :</label>
                                     <input type="text" name="price" class="form-control m-2" id="price" placeholder="Your price here">
                                     <div class="col-md-12 text-center">
-                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">Submit</button>
                                     </div>
                                 </div>
                             </form>

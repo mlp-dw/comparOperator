@@ -6,7 +6,7 @@ $getAllTO = $manager->getAllOperator();
 
 ?>
 
-    <section>
+    <section id="admin-forms">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
@@ -32,7 +32,7 @@ $getAllTO = $manager->getAllOperator();
                                     <label for="image">Image :</label>
                                     <input type="text" name="image" placeholder="http://...." class="m-2" id="image">
                                 <div class="col-md-12 text-center">
-                                    <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">create</button>
+                                    <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">Submit</button>
                                 </div>
                             </form>
                         </div>
