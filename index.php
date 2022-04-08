@@ -36,13 +36,6 @@ $distinctLocation = $manager->getAllLocations();
                 <div class="front" style="background-image: url('<?=$destination->getImage();?>')">
                     <div class="inner">
                         <h2><?=$destination->getLocation();?></h2>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
                         <label for="card<?=$destination->getLocation();?>" class="button" aria-hidden="true">
                             Details
                         </label>
