@@ -1,15 +1,24 @@
 <?php
 include "../config/autoload.php";
-$data = array(
-    'location' => $_POST["location"],
-    'price' => $_POST["price"],
-    'image' => $_POST["image"],
-    'tour_operator_id' => $_POST["tour_operator_id"]
-);
-$where = new Destination($data);
-$manager = new Manager;
+$isLocationProvided = isset($_POST["location"]) && !empty($_POST["location"]);
+$isPriceProvided = isset($_POST["price"]) && !empty($_POST["price"]);
+$isImageProvided = isset($_POST["image"]) && !empty($_POST["image"]);
+$isTourIdProvided = isset($_POST["tour_operator_id"]) && !empty($_POST["tour_operator_id"]);
 
-$manager->createDestination($where);
-
-header("Location: ../admin.php?success=Destination added !");
+if($isLocationProvided && $isPriceProvided && $isImageProvided && $isTourIdProvided){
+    $data = array(
+        'location' => $_POST["location"],
+        'price' => $_POST["price"],
+        'image' => $_POST["image"],
+        'tour_operator_id' => $_POST["tour_operator_id"]
+    );
+    $where = new Destination($data);
+    $manager = new Manager;
+    
+    $manager->createDestination($where);
+    
+    header("Location: ../admin.php?success=Destination added !");
+}else{
+    header("Location: ../admin_pages/add_destination.php?error=Please, fill all the entries.");
+}
 
