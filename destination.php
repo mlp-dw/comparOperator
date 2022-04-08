@@ -42,11 +42,11 @@ function starRating($operator){
 function ispremiumTour($operator){
     if($operator->getIsPremium() == 1){
         ?>
-        <p class="fs-4 fw-bold px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>">👑 <?=$operator->getName();?></a></p>
+        <p class="fw-bold px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>">👑 <?=$operator->getName();?></a></p>
         <?php
     }else{
         ?>
-        <p class="fs-4 fw-bold px-3"><?=$operator->getName();?></p>
+        <p class="fw-bold px-3"><?=$operator->getName();?></p>
         <?php
     }       
 }
@@ -62,11 +62,11 @@ function ispremiumTour($operator){
             
                 <div class="card card2">
                     <i class="fas fa-arrow-right" id="icon"></i>
-                    <p class="to fs-6 fw-bold"><?=$operator->getName();?></p>
-                    <div class="<?=$destination->getLocation()?>">
+                    <p class="to fw-bold"><?=$operator->getName();?></p>
+                    <div class="d-flex flex-column no-wrap <?=$destination->getLocation()?>">
                         <div class="w-50 h-100 backg">
-                            <h3 class="fs-3 fw-bold px-3 py-1" ><?=$destination->getLocation()?></h3>
-                            <p class="fs-4 fw-bold px-3"><?=$destination->getPrice()?> ฿</p>
+                            <h3 class="fw-bold px-3 py-1" ><?=$destination->getLocation()?></h3>
+                            <p class="fw-bold px-3"><?=$destination->getPrice()?> ฿</p>
                             <?=ispremiumTour($operator)?>
                             <p class="star px-3"><?=starRating($operator)?> (<?= $operator->getGradeCount();?>)</p>
 
