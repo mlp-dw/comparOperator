@@ -10,7 +10,7 @@ include '../utils/alert.php';
                         <div class="myform form">
                             <div class="logo mb-3">
                                 <div class="col-md-12 text-center">
-                                    <h1>Add TourOperator</h1>
+                                    <h1>ADD TOUROPERATOR</h1>
                                 </div>
                             </div>
                             <form action="../process/add_to.php" method="POST" name="tour_operator">
