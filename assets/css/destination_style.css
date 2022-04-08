@@ -1,5 +1,5 @@
 
-  i {
+   #icon {
     opacity: 0;
     font-size: 18px;
     color: #fff;
@@ -103,10 +103,12 @@
     -webkit-transition-delay: 0.1s;
     transition-delay: 0.1s;
   }
-  .container .card:hover i {
+  .container .card:hover #icon {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+    font-size: 2rem;
+
   }
   .container .card button {
     position: absolute;
