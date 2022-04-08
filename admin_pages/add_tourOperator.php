@@ -35,7 +35,7 @@ include '../utils/alert.php';
                                         </div>
                                     </div>
                                     <div class="col-md-12 text-center my-2">
-                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">add new tour operator</button>
+                                        <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">Submit</button>
                                     </div>
                                 </div>
                             </form>
