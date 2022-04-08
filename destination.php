@@ -47,7 +47,7 @@ function starRating($operator){
             $getReviews = $manager->getAllReviewByOperatorId($operator->getId());
         ?>
 
-            <div class="container">
+            <div class="container d-flex flex-column align-items-center">
             
                 <div class="card card2">
                     <i class="fas fa-arrow-right" id="icon"></i>

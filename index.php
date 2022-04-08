@@ -23,7 +23,7 @@ $distinctLocation = $manager->getAllLocations();
 </div> -->
 
 
-<div class="d-flex flex-row flex-wrap justify-content-center">
+<div class="main-background d-flex flex-row flex-wrap justify-content-center">
 
     <?php foreach($distinctLocation as $destination)
     {
