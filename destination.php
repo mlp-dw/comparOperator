@@ -30,8 +30,8 @@ function starRating($operator){
             <?php
             break;
         case '5':
-                ?>
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            ?>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             <?php
             break;
         default:
@@ -39,9 +39,20 @@ function starRating($operator){
             break;
     }
 }
+function ispremiumTour($operator){
+    if($operator->getIsPremium() == 1){
+        ?>
+        <p class="fs-4 fw-bold px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>">👑 <?=$operator->getName();?></a></p>
+        <?php
+    }else{
+        ?>
+        <p class="fs-4 fw-bold px-3"><?=$operator->getName();?></p>
+        <?php
+    }       
+}
 ?>
-
-<?php
+    <main class="fond">
+        <?php
         foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
             $getReviews = $manager->getAllReviewByOperatorId($operator->getId());
@@ -56,17 +67,7 @@ function starRating($operator){
                         <div class="w-50 h-100 backg">
                             <h3 class="fs-3 fw-bold px-3 py-1" ><?=$destination->getLocation()?></h3>
                             <p class="fs-4 fw-bold px-3"><?=$destination->getPrice()?> ฿</p>
-                            <?php
-                                if($operator->getIsPremium() == 1){
-                            ?>
-                                <p class="fs-4 fw-bold px-3"><a class="link-dark" target="_blank" href="<?=$operator->getLink()?>"><?=$operator->getName();?></a></p>
-                            <?php
-                                }else{
-                            ?>
-                                <p class="fs-4 fw-bold px-3"><?=$operator->getName();?></p>
-                            <?php
-                                }
-                            ?>
+                            <?=ispremiumTour($operator)?>
                             <p class="star px-3"><?=starRating($operator)?> (<?= $operator->getGradeCount();?>)</p>
 
                         </div>
@@ -133,5 +134,5 @@ function starRating($operator){
         <?php
         }
         ?>
-
+    </main>
 <?php include './utils/footer.php';?>
