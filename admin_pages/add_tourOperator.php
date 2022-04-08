@@ -1,4 +1,6 @@
-<?php include '../utils/header_admin.php';?>
+<?php include '../utils/header_admin.php';
+include '../utils/alert.php';
+?>
 
     <section>
         <div class="container">
