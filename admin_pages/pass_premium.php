@@ -1,5 +1,6 @@
 <?php
 include '../utils/header_admin.php';
+include '../utils/alert.php';
 $manager = new Manager();
 $getAllTO = $manager->getAllOperator();
 
@@ -20,6 +21,7 @@ $getAllTO = $manager->getAllOperator();
                                 <div class="form-group">
                                     <Label>Choose a Tour Operator</Label>
                                     <select name="tour_operator_id">
+                                        <option value="">--Choose a Tour Operator--</option>
                                         <?php foreach ($getAllTO as $tour) : 
                                             if($tour->getIsPremium() == 0){ ?>
                                             <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
