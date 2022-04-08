@@ -82,4 +82,14 @@ class Database {
 
         return $data;
     }
+
+    public function selectGroupByLocation($field, $table){
+        $request = $this->db->prepare("SELECT $field FROM $table GROUP BY $field");
+        $request->execute();
+        $data = $request->fetchAll();
+
+        return $data;
+
+    }
+
 }
