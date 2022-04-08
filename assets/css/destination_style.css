@@ -14,125 +14,115 @@ h2 {
 a {
   text-decoration: none;
 }
-a:hover{
-  font-weight: bolder;
-  text-decoration: underline;
+.fond{
+  background-image: url("https://digitalpainting.school/media/cache/creation_full_uhd/uploads/creation/sp/16/sp166-5e0fa2e6.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
 }
-  
-  /* .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  } */
-  .container .card {
-    position: relative;
-    width: 500px;
-    height: 200px;
-    background-color: #ffffff;
-    overflow: hidden;
-    margin-bottom: 4px;
-  }
-  .container .card:before {
-    content: "";
-    z-index: 99;
-    position: absolute;
-    top: -10px;
-    left: 32px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 16px;
-    background-color: #E6E5E1;
-  }
-  .container .card:after {
-    content: "";
-    z-index: 99;
-    position: absolute;
-    bottom: -10px;
-    left: 32px;
-    display: block;
-    width: 16px;
-    height: 16px;
-    border-radius: 16px;
-    background-color: #E6E5E1;
-  }
-  .container .card .fa-arrow-right {
-    z-index: 100;
-    position: absolute;
-    right: 75px;
-    bottom: 25px;
-    font-size: 40px;
-    cursor: pointer;
-  }
-  .container .card .to {
-    z-index: 99;
-    position: absolute;
-    top: 20px;
-    right: 0;
-    color: #000000;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    writing-mode: vertical-lr;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  
-  .container .card .social i:nth-of-type(1) {
-    -webkit-transition-delay: 0.4s;
-    transition-delay: 0.4s;
-  }
-  .container .card .social i:nth-of-type(2) {
-    -webkit-transition-delay: 0.3s;
-    transition-delay: 0.3s;
-  }
-  .container .card .social i:nth-of-type(3) {
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
-  }
-  .container .card .social i:nth-of-type(4) {
-    -webkit-transition-delay: 0.1s;
-    transition-delay: 0.1s;
-  }
-  .container .card:hover #icon {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    font-size: 2rem;
 
-  }
-  .container .card2 button {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    width: 30px;
-    height: 30px;
-    background-color: #534fc5;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.3s ease;
-    mix-blend-mode: hard-light;
-  }
-  .container .card button i {
-    font-size: 3rem;
-  }
-  .container .card:hover button {
-    transform: scale(16.5);
-  }
+.container .card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.container .card:before {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card:after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.container .card .to {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: #000000;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
 
+.container .card .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.container .card .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.container .card .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container .card .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.container .card:hover #icon {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  font-size: 2rem;
 
-  
-  
-  .container .card:hover p.star {
-    color: #f0c827;
-  }
-  .backg{
-    background: linear-gradient(-40deg, rgba(67, 138, 243, 0.6), rgba(255, 242, 166, 0.6));
-  }
+}
+.container .card2 button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #165eab;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.container .card button i {
+  font-size: 3rem;
+}
+.container .card:hover button {
+  transform: scale(16.5);
+}
+.container .card:hover p.star {
+  color: #f0c827;
+}
+.backg{
+  background: linear-gradient(-40deg, rgba(67, 138, 243, 0.6), rgba(255, 242, 166, 0.6));
+}
   
 
 
@@ -143,6 +133,8 @@ a:hover{
   height: 200px;
   background-image: url("https://m.media-amazon.com/images/M/MV5BYzA1ZGY2MzItMzI4Ni00YjM3LThhNmEtNTE1NWRmMmVmMjhmXkEyXkFqcGdeQXVyNjYwMjkwMjg@._V1_.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Drum {
@@ -158,6 +150,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://m.media-amazon.com/images/M/MV5BOTMyMjI1YTQtOThhNC00ODI2LWI5OTEtYWFiMGUzMTg5OWE4XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Dressrosa {
@@ -173,6 +167,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://m.media-amazon.com/images/M/MV5BODkzMjE2ZmEtYzlmOS00ZTYzLWE5MjQtMTI4NTk3MDc3NWI0XkEyXkFqcGdeQXVyNzgxMzc3OTc@._V1_.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Wa-no-Kuni {
@@ -188,6 +184,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://2img.net/h/img110.xooimage.com/files/b/d/6/1-4fe6718.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Water-Seven {
@@ -203,6 +201,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://i.servimg.com/u/f19/15/08/91/65/kokoya10.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Kokoyashi {
@@ -218,6 +218,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Amazon-Lily {
@@ -233,6 +235,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://pm1.narvii.com/7096/1b038d5a724933a82df1a00f3646a0e6d085b39ar1-1600-911v2_hq.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Ohara {
@@ -248,6 +252,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://2img.net/image.noelshack.com/fichiers/2014/47/1416754576-one-piece-background-036-by-lorenorkerstinxx-d7nclg8.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Fushia {
@@ -263,6 +269,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://i.servimg.com/u/f47/13/67/64/62/tm/archip10.png");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Saboady {
@@ -278,6 +286,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://i.pinimg.com/564x/13/f0/11/13f0119494dc0f1950b4947368bee68f.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Baratie {
@@ -293,6 +303,8 @@ filter: grayscale(0);
   height: 200px;
   background-image: url("https://i.pinimg.com/564x/12/ce/2f/12ce2f9450878be4ec74315c354ee0a7.jpg");
   background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
   filter: grayscale(100%);
 }
 .container .card2 .Weatheria {

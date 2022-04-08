@@ -7,13 +7,15 @@
 h1,h2,h3,h4,h5,h6{
   font-family: "IM Fell English SC";
 }
-p{
+p,a{
   font-family: "Indie Flower";
 }
 
 .main-background{
-  background-image: url("https://wallpaperaccess.com/full/2222767.jpg");
-  background-size: center;
+  background-image: url("https://digitalpainting.school/media/cache/creation_full_uhd/uploads/creation/sp/16/sp166-5e0fa2e6.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
 }
 
 .card {
