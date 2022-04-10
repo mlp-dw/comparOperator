@@ -1,18 +1,37 @@
 <?php
 include "../config/autoload.php";
-$isLocationProvided = isset($_POST["location"]) && !empty($_POST["location"]);
-$isPriceProvided = isset($_POST["price"]) && !empty($_POST["price"]);
-$isImageProvided = isset($_POST["image"]) && !empty($_POST["image"]);
-$sDescriptionProvided = isset($_POST["description"]) && !empty($_POST["description"]);
-$isTourIdProvided = isset($_POST["tour_operator_id"]) && !empty($_POST["tour_operator_id"]);
+
+$location = htmlspecialchars($_POST["location"]);
+$price = htmlspecialchars($_POST["price"]);
+$image = htmlspecialchars($_POST["image"]);
+$description = htmlspecialchars($_POST["description"]);
+$adventure = htmlspecialchars($_POST["adventure"]);
+$food = htmlspecialchars($_POST["food"]);
+$rhum = htmlspecialchars($_POST["rhum"]);
+$earn_money = htmlspecialchars($_POST["earn_money"]);
+$tourOperatorId = $_POST["tour_operator_id"];
+
+$isLocationProvided = isset($location) && !empty($location);
+$isPriceProvided = isset($price) && !empty($price);
+$isImageProvided = isset($image) && !empty($image);
+$sDescriptionProvided = isset($description) && !empty($description);
+$isAvdventureProvided = isset($adventure) && !empty($adventure);
+$isFoodProvided = isset($food) && !empty($food);
+$isRhumProvided = isset($rhum) && !empty($rhum);
+$isEarnMoneyProvided = isset($earn_money) && !empty($earn_money);
+$isTourIdProvided = isset($tourOperatorId) && !empty($tourOperatorId);
 
 if($isLocationProvided && $isPriceProvided && $isImageProvided && $isTourIdProvided){
     $data = array(
-        'location' => $_POST["location"],
-        'price' => $_POST["price"],
-        'image' => $_POST["image"],
-        'description' => $_POST["description"],
-        'tour_operator_id' => $_POST["tour_operator_id"]
+        'location' => $location,
+        'price' => $price,
+        'image' => $image,
+        'description' => $description,
+        'adventure' => $adventure,
+        'food' => $food,
+        'rhum' => $rhum,
+        'earn_money' => $earn_money,
+        'tour_operator_id' => $tourOperatorId
     );
     $where = new Destination($data);
     $manager = new Manager;

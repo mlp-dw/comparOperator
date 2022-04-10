@@ -39,6 +39,7 @@ function starRating($operator){
             break;
     }
 }
+
 function ispremiumTour($operator){
     if($operator->getIsPremium() == 1){
         ?>
@@ -52,6 +53,15 @@ function ispremiumTour($operator){
 }
 ?>
     <section class="fond">
+        <div id="scroll_to_top">
+            <a href="#top"><i class="fas fa-arrow-alt-circle-up fa-inverse fa-2x"></i></a>
+        </div>
+        <div id="return">
+            <a href="/comparOperator/index.php" class="d-flex flex-row justify-content-around">
+                <i class="fas fa-arrow-left fa-inverse fa-2x"></i>
+                <i class="fas fa-solid fa-umbrella-beach fa-inverse fa-2x"></i>
+            </a>
+        </div>
         <?php
         foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
@@ -99,6 +109,7 @@ function ispremiumTour($operator){
                                     <label for="rating">Rating:</label>
                                     <input type="hidden" name="count" value="1">
                                     <select name="rating" id="rating">
+                                        <option value="">--Rate--</option>
                                         <option value="0">0</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -118,7 +129,7 @@ function ispremiumTour($operator){
                                     { 
                                     ?>
                                         <div>
-                                            <h2><?=$review->getAuthor()?>:</h2>
+                                            <h6><?=$review->getAuthor()?>:</h6>
                                             <p><?=$review->getMessage()?>:</p>
                                         </div>
                                     <?php

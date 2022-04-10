@@ -1,11 +1,14 @@
 <?php
 include "../config/autoload.php";
+$message = htmlspecialchars($_POST["message"]);
+$author = htmlspecialchars($_POST["author"]);
+$rating = htmlspecialchars($_POST["rating"]);
 
-$isMessageProvided = isset($_POST["message"]) && !empty($_POST["message"]);
-$isAuthorProvided = isset($_POST["author"]) && !empty($_POST["author"]);
+$isMessageProvided = isset($message) && !empty($message);
+$isAuthorProvided = isset($author) && !empty($author);
 $isTourIdProvided = isset($_POST["tour_operator_id"]) && !empty($_POST["tour_operator_id"]);
 $isCountProvided = isset($_POST["count"]) && !empty($_POST["count"]);
-$isRatingProvided = isset($_POST["rating"]) && !empty($_POST["rating"]);
+$isRatingProvided = isset($rating) && !empty($rating);
 
 $idDestination = $_POST["id-destination"];
 
@@ -15,13 +18,12 @@ function redirection($idDestination){
     header("Location: ../destination.php?location=" . $destination->getLocation());
 }
 
-
 if($isMessageProvided && $isAuthorProvided && $isTourIdProvided && $isCountProvided && $isRatingProvided){
  
     // ADD COMMENT------------------------------
     $data = array(
-        'message' => $_POST["message"],
-        'author' => $_POST["author"],
+        'message' => $message,
+        'author' => $author,
         'tour_operator_id' => $_POST["tour_operator_id"]
     );
     $comment = new Review($data);
@@ -31,11 +33,11 @@ if($isMessageProvided && $isAuthorProvided && $isTourIdProvided && $isCountProvi
     // ADD RATING------------------------------
     $id = $_POST["tour_operator_id"];
     $operator = $manager->getOperator($id);
-    $rating = array(
+    $ratingData = array(
         'grade_count' => $operator->getGradeCount() + $_POST["count"],
-        'grade_total' => $operator->getGradeTotal() + $_POST["rating"]
+        'grade_total' => $operator->getGradeTotal() + $rating
     );
-    $manager->addRating($id, $rating);
+    $manager->addRating($id, $ratingData);
 
     // REDIRECTION-----------------------------
     redirection($idDestination);

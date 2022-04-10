@@ -19,7 +19,7 @@ class TourOperator{
         $this->link = $data['link'] ;
         $this->gradeCount = $data['grade_count'] ?? 0;
         $this->gradeTotal = $data['grade_total'] ?? 0 ;
-        $this->isPremium = $data['is_premium'] ;
+        $this->isPremium = $data['is_premium'] ?? 0;
     }
 
     public function toSql() {

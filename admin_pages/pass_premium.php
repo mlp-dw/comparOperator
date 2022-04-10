@@ -7,6 +7,14 @@ $getAllTO = $manager->getAllOperator();
 ?>
 
     <section id="admin-forms" class="d-flex flex-column align-items-center justify-content-center">
+        <div id="scroll_to_top">
+            <a href="#top"><i class="fas fa-arrow-alt-circle-up fa-inverse fa-2x"></i></a>
+        </div>
+        <div id="return">
+            <a href="/comparOperator/admin.php" class="d-flex flex-row justify-content-around">
+                <i class="fas fa-arrow-left fa-inverse fa-2x"></i>
+            </a>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
@@ -28,7 +36,7 @@ $getAllTO = $manager->getAllOperator();
                                     </select>
                                 </div>
                                 <div class="col-md-12 text-center m-3">
-                                    <button type="submit" class=" btn btn-block mybtn btn-primary rounded-pill tx-tfm">Submit</button>
+                                    <button type="submit" class="m-2 btn btn-block mybtn btn-primary rounded-pill tx-tfm">Submit</button>
                                 </div>
                             </form>
                         </div>

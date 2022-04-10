@@ -153,11 +153,11 @@ p,a{
   grid-column: 3/-1;
   justify-self: right;
 }
-.back .button {
+.back .button2 {
   grid-column: 1/-1;
   justify-self: center;
 }
-.button {
+.button2 {
   grid-row: -1;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -177,19 +177,19 @@ p,a{
   transition: 0.3s ease-in-out;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
 }
-.button:hover {
+.button2:hover {
   background-color: #fff;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
   text-shadow: none;
   color: #355cc9;
 }
-.button.return {
+.button2.return {
   line-height: 3em;
   color: #355cc9;
   border-color: #355cc9;
   text-shadow: none;
 }
-.button.return:hover {
+.button2.return:hover {
   background-color: #355cc9;
   color: #fff;
   box-shadow: none;
@@ -227,11 +227,12 @@ ADMIN------------------------------------------------------ */
 /* Common button styles */
 .button {
   margin: 5%;
+  font-weight: bold;
 	float: left;
 	display: block;
-	/* border: none; */
+	border: none;
 	background: none;
-	/* color: inherit; */
+	color: inherit;
 	position: relative;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;
@@ -298,7 +299,6 @@ ADMIN------------------------------------------------------ */
   border-radius: 10%;
   box-shadow: #859ddf;
   padding: 5%;
-  margin-top: 8%;
   background: linear-gradient(40deg, rgba(67, 138, 243, 0.8), rgba(255, 242, 166, 0.8));
 }
 #admin-forms{
@@ -307,4 +307,26 @@ ADMIN------------------------------------------------------ */
   background-attachment: center;
   background-repeat: no-repeat;
   height: 90vh;
+}
+#admin-forms1{
+  background-image: url("https://digitalpainting.school/media/cache/creation_full_uhd/uploads/creation/sp/16/sp166-5e0fa2e6.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 5%;
+}
+#scroll_to_top {
+  position: fixed;
+  width: 2%;
+  height: 20%;
+  bottom: 2%;
+  right: 1%;
+}
+#return {
+  position: fixed;
+  width: 2%;
+  height: 50%;
+  top: 50%;
+  left: 5%;
 }

@@ -19,17 +19,14 @@ include __DIR__ . "/../config/autoload.php";
 </head>
 
 <body>
+<header class="d-flex flex-wrap justify-content-between px-5 py-3 bg-dark">
+    <a href="/comparOperator/admin.php">
+      <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
+    </a>
 
-  <header>
-    <div class="bg-dark collapse" id="navbarHeader"></div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
-          <a href="/comparOperator/admin.php">
-            <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
-          </a>
-          <?php if(isset($_SESSION['pseudo'])){?>
-            <a href="/comparOperator/process/logout.php" class="text-white fs-4"><?=$_SESSION['pseudo'];?> disconnection</a>
-          <?php } ?>
-        </div>
-      </div>
+    <ul class="nav nav-pills">
+      <?php if(isset($_SESSION['pseudo'])){?>
+        <li class="nav-item"><a href="/comparOperator/process/logout.php" class="nav-link text-white fs-4">Log out</a></li>
+      <?php } ?>    
+    </ul>
   </header>

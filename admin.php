@@ -11,16 +11,16 @@ if(isset($_SESSION["pseudo"])){
          </div>
          <div class="text-center text-dark d-flex flex-column">
             <a class="d-flex justify-content-center" href="/comparOperator/admin_pages/add_tourOperator.php">
-               <button class="button button--wayra button--border-thin button--round-s">Add Tour Operator</button>
+               <button class="button button2 button--wayra button--border-thin button--round-s">Add Tour Operator</button>
             </a>
             <a class="d-flex justify-content-center" href="/comparOperator/admin_pages/add_destination.php">
-               <button class="button button--wayra button--border-thin button--round-s">Add Destination</button>
+               <button class="button button2 button--wayra button--border-thin button--round-s">Add Destination</button>
             </a>
             <a class="d-flex justify-content-center" href="/comparOperator/admin_pages/add_offer.php">
-               <button class="button button--wayra button--border-thin button--round-s">Add Offer</button>
+               <button class="button button2 button--wayra button--border-thin button--round-s">Add Offer</button>
             </a>
             <a class="d-flex justify-content-center" href="/comparOperator/admin_pages/pass_premium.php">
-               <button class="button button--wayra button--border-thin button--round-s">Pass Premium</button>
+               <button class="button button2 button--wayra button--border-thin button--round-s">Pass Premium</button>
             </a>
          </div>
       </div>
