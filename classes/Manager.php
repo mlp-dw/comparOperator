@@ -5,6 +5,8 @@ class Manager {
     public function __construct() {
         $this->bdd = new Database();
     } 
+// -----------------------------------------------------------------------------------------
+// CREATE SOMETING---------------------------------------
 
     public function createTourOperator($tourOperator) {
         $this->bdd->insertInto(TourOperator::$TABLE_TO, $tourOperator->toSql());
@@ -21,7 +23,8 @@ class Manager {
     public function addRating($id, $rating){
         $this->bdd->update(TourOperator::$TABLE_TO, $id, $rating);
     }
-
+// -----------------------------------------------------------------------------------------
+// SELECT SOMETING---------------------------------------
     public function getAllOperator(){
         $data = $this->bdd->selectAll(TourOperator::$TABLE_TO);
 
@@ -44,7 +47,7 @@ class Manager {
     }
 
     public function getAllLocations(){
-        $data = $this->bdd->selectGroupByLocation("location, image", Destination::$TABLE_DESTINATION);
+        $data = $this->bdd->selectGroupBy("location, image, description, adventure, food, rhum, earn_money", Destination::$TABLE_DESTINATION);
         $newData = array_map(function ($sql) {return new Destination($sql);}, $data);
         return $newData;
     }
@@ -78,6 +81,11 @@ class Manager {
 
     public function properImage($value) {
         $data = $this->bdd->selectDistinctWhere("image", Destination::$TABLE_DESTINATION, "location", $value);
+        return $data;
+    }
+
+    public function logAdmin($pseudo, $password){
+        $data = $this->bdd->selectAdmin($pseudo, $password);
         return $data;
     }
 

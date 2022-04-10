@@ -7,30 +7,31 @@ $getAllDestinations = $manager->getAllLocations();
 
 ?>
 
-    <section id="admin-forms">
+    <section id="admin-forms" class="d-flex flex-column align-items-center justify-content-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
                     <div id="first">
-                        <div class="myform form">
+                        <div class="myform form d-flex flex-column justify-content-center align-items-center">
                             <div class="logo mb-3">
                                 <div class="col-md-12 text-center">
-                                    <h1>ADD OFFER</h1>
+                                    <h1>Add Offer</h1>
                                 </div>
                             </div>
-                            <form action="../process/add_offer.php" method="POST" name="offer">
+                            <form action="/comparOperator/process/add_offer.php" method="POST" name="offer">
                                 <div class="form-group d-flex flex-column">
-                                    <label for="location">Destination :</label>
-                                    <select id="location" name="destination" class="m-2">
+                                    <label for="destination">Destination :</label>
+                                    <select id="destination" name="destination" class="m-2">
+                                        <option value="">-- Choose the Destination --</option>
                                         <?php foreach ($getAllDestinations as $destination) : ?>
-                                            <option value="<?= $destination->getLocation() ?>"><?= $destination->getLocation() ?></option>
-                                            <?php endforeach; ?>
-                                            <input type="hidden" name="image" value="<?=$destination->getImage()?>">
+                                            <option value="<?= $destination->getLocation(); ?>"><?= $destination->getLocation() ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                     <label for="tour-operator">Tour Operator :</label>
                                     <select id="tour-operator" name="tour_operator" class="m-2">
+                                        <option value="">-- Choose the Tour Operator--</option>
                                         <?php foreach ($getAllTO as $tour) : ?>
-                                            <option value="<?= $tour->getId() ?>"><?= $tour->getName() ?></option>
+                                            <option value="<?= $tour->getId(); ?>"><?= $tour->getName(); ?></option>
                                         <?php endforeach; ?>
                                     </select>
                                     <label for="price">Price :</label>

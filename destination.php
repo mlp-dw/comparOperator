@@ -51,7 +51,7 @@ function ispremiumTour($operator){
     }       
 }
 ?>
-    <main class="fond">
+    <section class="fond">
         <?php
         foreach ($getOperatorsBydestination as $destination) {
             $operator = $manager->getOperator($destination->getTourOperatorId());
@@ -134,5 +134,5 @@ function ispremiumTour($operator){
         <?php
         }
         ?>
-    </main>
+    </section>
 <?php include './utils/footer.php';?>
