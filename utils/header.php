@@ -18,22 +18,16 @@ include __DIR__ . "/../config/autoload.php";
 </head>
 
 <body>
-
-<!-- header
-============================================================================ -->
-
-
-<header>
-
-  <div class="bg-dark collapse" id="navbarHeader">
+  <header>
+    <div class="bg-dark collapse" id="navbarHeader">
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          
+          <a href="/comparOperator/index.php">
+            <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
+          </a>
+          <li><a href="/comparOperator/admin.php" class="text-white">Admin Mode</a></li>
+      </div>
     </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-      <div class="container">
-        
-        <a href="/comparOperator/index.php">
-          <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
-        </a>
-        <li><a href="/comparOperator/admin.php" class="text-white">Admin Mode</a></li>
-    </div>
-  </div>
-</header>
+  </header>

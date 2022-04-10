@@ -22,7 +22,7 @@ a {
 }
 
 .container .card {
-  position: relative;
+  /* position: relative; */
   width: 500px;
   height: 200px;
   background-color: #ffffff;
@@ -112,7 +112,27 @@ a {
 }
   
 
-
+/* Gyojin-tō----------------------------------------------- */
+.container .card .Gyojin-tō
+ {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  font-size: 2.5vh;
+}
+.container .card2 .Gyojin-tō
+ {
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+}
+.container .card:hover .Gyojin-tō
+ {
+filter: grayscale(0);
+}
 /* DRUM----------------------------------------------- */
 .container .card .Drum {
   z-index: 100;
@@ -327,11 +347,28 @@ RESPONSIVE */
   .container .card p.star {
     font-size: 1vh;
   }
+  /* Gyojin-tō----------------------------------------------- */
+  .container .card .Gyojin-tō
+  {
+  z-index: 100;
+  width: 75%;
+  height: 100%;
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  font-size: 2vh;
+  }
+  .container .card .Gyojin-tō h3, p{
+    font-size: 2vh;
+  }
+
   /* AMAZON LILY----------------------------------------------- */
   .container .card .Amazon-Lily {
     z-index: 100;
     width: 75%;
-    height: 20%;
+    height: 100%;
     font-size: 2vh;
     background-image: url("https://pm1.narvii.com/7310/188bffbd6283aefb030b1b12c2b7b2f2288af9ebr1-500-281v2_hq.jpg");
     background-size: cover;
@@ -493,7 +530,8 @@ RESPONSIVE */
     font-size: 2vh;
   }
 }
-
+/* ///////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 550px) {
   .container .card {
   position: relative;
@@ -502,6 +540,22 @@ RESPONSIVE */
   background-color: #ffffff;
   overflow: hidden;
 }
+  /* Gyojin-tō----------------------------------------------- */
+  .container .card .Gyojin-tō
+  {
+  z-index: 100;
+  width: 75%;
+  height: 100%;
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  font-size: 2vh;
+  }
+  .container .card .Gyojin-tō h3, p{
+    font-size: 1.75vh;
+  }
   /* AMAZON LILY----------------------------------------------- */
   .container .card .Amazon-Lily {
     z-index: 100;
@@ -671,7 +725,8 @@ RESPONSIVE */
     font-size: 1vh;
   }
 }
-
+/* ////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 500px) {
   .container .card {
   position: relative;
@@ -679,7 +734,22 @@ RESPONSIVE */
   height: 20%;
   background-color: #ffffff;
   overflow: hidden;
-}
+  }
+  /* Gyojin-tō----------------------------------------------- */
+  .container .card .Gyojin-tō {
+  z-index: 100;
+  width: 75%;
+  height: 100%;
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  font-size: 1.75vh;
+  }
+  .container .card .Gyojin-tō h3, p{
+    font-size: 1.55vh;
+  }
   /* AMAZON LILY----------------------------------------------- */
   .container .card .Amazon-Lily {
     z-index: 100;
@@ -849,7 +919,8 @@ RESPONSIVE */
     font-size: 1vh;
   }
 }
-
+/* //////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////// */
 @media screen and (max-width: 395px) {
   .container .card {
   position: relative;
@@ -858,6 +929,22 @@ RESPONSIVE */
   background-color: #ffffff;
   overflow: hidden;
 }
+  /* Gyojin-tō----------------------------------------------- */
+  .container .card .Gyojin-tō
+  {
+  z-index: 100;
+  width: 75%;
+  height: 100%;
+  background-image: url("https://pm1.narvii.com/7508/d7f04cefea72609053da59c82979ed67e2a429b7r4-600-300_00.jpg");
+  background-size: cover;
+  background-attachment: center;
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  font-size: 1.5vh;
+  }
+  .container .card .Gyojin-tō h3, p{
+    font-size: 1.5vh;
+  }
   /* AMAZON LILY----------------------------------------------- */
   .container .card .Amazon-Lily {
     z-index: 100;

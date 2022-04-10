@@ -83,13 +83,19 @@ class Database {
         return $data;
     }
 
-    public function selectGroupByLocation($field, $table){
+    public function selectGroupBy($field, $table){
         $request = $this->db->prepare("SELECT $field FROM $table GROUP BY $field");
         $request->execute();
         $data = $request->fetchAll();
 
         return $data;
+    }
+    public function selectAdmin($pseudo, $password){
+        $request = $this->db->prepare("SELECT * FROM admin WHERE pseudo = '$pseudo' AND password = '$password'");
+        $request->execute();
+        $data = $request->fetch();
 
+        return $data;
     }
 
 }
