@@ -1,32 +1,28 @@
 <?php 
-
 class Destination {
     
     private $id;
     private $location;
     private $price;
     private $image;
+    private $description;
     private $adventure;
     private $food;
     private $rhum;
     private $earn_money;
-    private $decription;
     private $tourOperatorId;
-
     static public $TABLE_DESTINATION = 'destination';
 
-
-    private function hydrate($data) 
-    {
+    private function hydrate($data) {
         $this->id = $data['id'] ?? null;
         $this->location = $data['location'] ;
         $this->price = $data['price'] ?? null;
         $this->image = $data['image'] ;
-        $this->description = $data['description'] ;
-        $this->adventure = $data['adventure'] ;
-        $this->food = $data['food'] ;
-        $this->rhum = $data['rhum'] ;
-        $this->earn_money = $data['earn_money'] ;
+        $this->description = $data['description'] ?? null;
+        $this->adventure = $data['adventure'] ?? 0;
+        $this->food = $data['food'] ?? 0;
+        $this->rhum = $data['rhum'] ?? 0;
+        $this->earn_money = $data['earn_money'] ?? 0;
         $this->tourOperatorId = $data['tour_operator_id'] ?? null ;
     }
 
@@ -40,11 +36,11 @@ class Destination {
             'location' => $this->getLocation(),
             'price' => $this->getPrice(),
             'image' => $this->getImage(),
+            'description' => $this->getDescription(),
             'adventure' => $this->getAdventure(),
             'food' => $this->getFood(),
             'rhum' => $this->getRhum(),
             'earn_money' => $this->getEarnMoney(),
-            'description' => $this->getDescription(),
             'tour_operator_id' => $this->getTourOperatorId()    
         );
     }

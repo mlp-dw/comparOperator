@@ -15,7 +15,6 @@ class Manager {
     public function createDestination($destination) {
         $this->bdd->insertInto(Destination::$TABLE_DESTINATION, $destination->toSql());
     }
- 
     public function createReview($review){
         $this->bdd->insertInto(Review::$TABLE_REVIEW, $review->toSql());
     }
@@ -79,8 +78,8 @@ class Manager {
         $this->bdd->update(TourOperator::$TABLE_TO, $tourOperator->getId(), ["is_premium"=>$value]);
     }
 
-    public function properImage($value) {
-        $data = $this->bdd->selectDistinctWhere("image", Destination::$TABLE_DESTINATION, "location", $value);
+    public function properElement($entries, $value) {
+        $data = $this->bdd->selectDistinctWhere($entries, Destination::$TABLE_DESTINATION, "location", $value);
         return $data;
     }
 

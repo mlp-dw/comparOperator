@@ -10,11 +10,9 @@ function createSession($admin){
     $_SESSION['pseudo'] = $admin["pseudo"];
     $_SESSION['password'] = $admin["password"];
     $_SESSION["id"] = $admin["id"];
-
 }
 
 if($isPseudo && $isPassword){
-    
     $manager = new Manager();
     $admin = $manager->logAdmin($pseudo, sha1($password));
     createSession($admin);
@@ -23,8 +21,7 @@ if($isPseudo && $isPassword){
         header("Location: ../admin.php"); 
     }else{
         header("Location: ../admin.php");
-    }
-        
+    }     
 }else{
     header("Location: ../index.php");
 }
