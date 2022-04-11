@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include __DIR__ . "/../config/db.php";
 include __DIR__ . "/../config/autoload.php";
 ?>
@@ -19,19 +19,14 @@ include __DIR__ . "/../config/autoload.php";
 </head>
 
 <body>
+<header class="d-flex flex-wrap justify-content-between px-5 py-3 bg-dark">
+    <a href="/comparOperator/admin.php">
+      <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
+    </a>
 
-  <!-- header
-============================================================================ -->
-
-
-  <header>
-    <div class="bg-dark collapse" id="navbarHeader"></div>
-      <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container">
-          <a href="/comparOperator/index.php">
-            <img src="/comparOperator/img/onepieceperator.png" class="img-fluid w-50" alt="">
-          </a>
-          <a href="/comparOperator/index.php" class="text-white">Disconnect</a>
-        </div>
-      </div>
+    <ul class="nav nav-pills">
+      <?php if(isset($_SESSION['pseudo'])){?>
+        <li class="nav-item"><a href="/comparOperator/process/logout.php" class="nav-link text-white fs-4">Log out</a></li>
+      <?php } ?>    
+    </ul>
   </header>

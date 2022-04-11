@@ -27,7 +27,6 @@ class Database {
     }
 
     public function update($table, $id, $values){
-        
         $request = 'UPDATE ' . $table . ' SET ';
         foreach ($values as $key => $value) 
         {
@@ -42,13 +41,10 @@ class Database {
 
 
     public function selectOne($table, $id){
-    // On récupère les données d'une ligne SQL en spécifiant la table et l'id que l'on cherche
     $request = $this->db->query("SELECT * FROM $table WHERE id = '$id'");
     $data = $request->fetch();
 
-    // On retourne les données brutes
     return $data;
-
     }
 
     public function selectAll($table){
@@ -83,13 +79,24 @@ class Database {
         return $data;
     }
 
-    public function selectGroupByLocation($field, $table){
+    public function selectGroupBy($field, $table){
         $request = $this->db->prepare("SELECT $field FROM $table GROUP BY $field");
         $request->execute();
         $data = $request->fetchAll();
 
         return $data;
+    }
+    
+    public function selectAdmin($pseudo, $password){
+        $request = $this->db->prepare("SELECT * FROM admin WHERE pseudo = '$pseudo' AND password = '$password'");
+        $request->execute();
+        $data = $request->fetch();
 
+        return $data;
+    }
+    public function insertOffer($table, $entrie, $value){
+        $request = $this->db->prepare("INSERT INTO $table ($entrie) VALUES ($value)");
+        $request->execute();
     }
 
 }

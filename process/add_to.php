@@ -1,15 +1,28 @@
 <?php
 include "../config/autoload.php";
-
-$isNameProvided = isset($_POST["name"]) && !empty($_POST["name"]);
-$isLinkProvided = isset($_POST["link"]) && !empty($_POST["link"]);
+$name = htmlspecialchars($_POST["name"]);
+$link = htmlspecialchars($_POST["link"]);
+$isNameProvided = isset($name) && !empty($name);
+$isLinkProvided = isset($link) && !empty($link);
 $isPremiumProvided = isset($_POST["is_premium"]) && !empty($_POST["is_premium"]);
+
 
 if($isNameProvided && $isLinkProvided && $isPremiumProvided){
 
     $data = array(
-        'name' => $_POST["name"],
-        'link' => $_POST["link"],
+        'name' => $name,
+        'link' => $link,
+        'is_premium' => $_POST["is_premium"]
+    );
+    $to = new TourOperator($data);
+    $manager = new Manager;
+    $manager->createTourOperator($to);
+
+    header("Location: ../admin.php?success=Premium Tour Operator added !");
+}elseif($isNameProvided && $isLinkProvided){
+    $data = array(
+        'name' => $name,
+        'link' => $link,
         'is_premium' => $_POST["is_premium"]
     );
     $to = new TourOperator($data);
