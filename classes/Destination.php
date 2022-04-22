@@ -18,11 +18,11 @@ class Destination {
         $this->location = $data['location'] ;
         $this->price = $data['price'] ?? null;
         $this->image = $data['image'] ;
-        $this->description = $data['description'] ?? null;
-        $this->adventure = $data['adventure'] ?? 0;
-        $this->food = $data['food'] ?? 0;
-        $this->rhum = $data['rhum'] ?? 0;
-        $this->earn_money = $data['earn_money'] ?? 0;
+        $this->description = $data['description'] ;
+        $this->adventure = $data['adventure'];
+        $this->food = $data['food'] ;
+        $this->rhum = $data['rhum'] ;
+        $this->earn_money = $data['earn_money'] ;
         $this->tourOperatorId = $data['tour_operator_id'] ?? null ;
     }
 
